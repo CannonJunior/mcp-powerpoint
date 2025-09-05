@@ -270,7 +270,8 @@ def extract_line_format(shape) -> Optional[LineFormat]:
                     if len(rgb_str) == 6:
                         line_color = f"#{rgb_str.upper()}"
             except:
-                pass
+                # If color RGB can't be accessed, mark as no line
+                line_color = "NO_LINE"
         
         return LineFormat(
             color=line_color,
@@ -516,6 +517,9 @@ def apply_fill_formatting(shape, fill_data: FillFormat):
             rgb_color = hex_to_rgb(fill_data.fore_color)
             if rgb_color:
                 fill.fore_color.rgb = rgb_color
+        elif fill_data.fill_type == "BACKGROUND":
+            # For background fills, explicitly set to no fill to prevent default gradient
+            fill.background()
         
     except Exception as e:
         print(f"Warning: Failed to apply fill formatting: {str(e)}")
@@ -528,7 +532,10 @@ def apply_line_formatting(shape, line_data: LineFormat):
             
         line = shape.line
         
-        if line_data.color:
+        if line_data.color == "NO_LINE":
+            # Explicitly set no line to prevent default blue borders
+            line.fill.background()
+        elif line_data.color:
             rgb_color = hex_to_rgb(line_data.color)
             if rgb_color:
                 line.color.rgb = rgb_color
@@ -544,8 +551,18 @@ def apply_text_formatting(text_frame, text_frame_data: TextFrame):
     try:
         if text_frame_data.paragraphs:
             # Clear existing paragraphs except the first
-            while len(text_frame.paragraphs) > 1:
-                text_frame.paragraphs._delete_paragraph(text_frame.paragraphs[-1])
+            try:
+                while len(text_frame.paragraphs) > 1:
+                    # Try different ways to delete paragraphs
+                    if hasattr(text_frame.paragraphs, '_delete_paragraph'):
+                        text_frame.paragraphs._delete_paragraph(text_frame.paragraphs[-1])
+                    else:
+                        # Alternative approach - clear all and rebuild
+                        text_frame.clear()
+                        break
+            except:
+                # If paragraph deletion fails, clear and rebuild
+                text_frame.clear()
             
             # Set first paragraph or add new ones
             for i, para_data in enumerate(text_frame_data.paragraphs):
@@ -595,6 +612,8 @@ def apply_font_formatting(font, font_data: FontInfo):
             rgb_color = hex_to_rgb(font_data.color_rgb)
             if rgb_color:
                 font.color.rgb = rgb_color
+            else:
+                print(f"Warning: Could not convert font color {font_data.color_rgb} to RGB")
     except Exception as e:
         print(f"Warning: Failed to apply font formatting: {str(e)}")
 
