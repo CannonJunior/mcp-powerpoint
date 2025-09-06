@@ -80,8 +80,13 @@ def extract_font_info(font) -> Optional[FontInfo]:
                         rgb_str = str(rgb_val)
                         if len(rgb_str) == 6:
                             font_color = f"#{rgb_str.upper()}"
+            else:
+                # If RGB can't be accessed, it might be an automatic/theme color
+                # For most text, automatic color defaults to black
+                font_color = "#000000"
         except:
-            pass
+            # Default to black for text when color extraction fails
+            font_color = "#000000"
     
     return FontInfo(
         name=getattr(font, 'name', None),
@@ -532,9 +537,18 @@ def apply_line_formatting(shape, line_data: LineFormat):
             
         line = shape.line
         
-        if line_data.color == "NO_LINE":
+        if line_data.color == "NO_LINE" or line_data.color is None:
             # Explicitly set no line to prevent default blue borders
-            line.fill.background()
+            try:
+                # Set line fill to no fill
+                line.fill.background()
+                line.width = 0
+            except:
+                try:
+                    # Alternative approach - set width to 0
+                    line.width = 0
+                except:
+                    pass
         elif line_data.color:
             rgb_color = hex_to_rgb(line_data.color)
             if rgb_color:

@@ -631,7 +631,7 @@
                       "bold": true,
                       "italic": null,
                       "underline": null,
-                      "color_rgb": null
+                      "color_rgb": "#000000"
                     }
                   }
                 ],
@@ -690,7 +690,7 @@
                       "bold": true,
                       "italic": null,
                       "underline": null,
-                      "color_rgb": null
+                      "color_rgb": "#000000"
                     }
                   }
                 ],
@@ -2479,7 +2479,7 @@
                       "bold": true,
                       "italic": null,
                       "underline": null,
-                      "color_rgb": null
+                      "color_rgb": "#000000"
                     }
                   },
                   {
@@ -2490,7 +2490,7 @@
                       "bold": true,
                       "italic": null,
                       "underline": null,
-                      "color_rgb": null
+                      "color_rgb": "#000000"
                     }
                   }
                 ],
@@ -3135,7 +3135,7 @@
                               "bold": false,
                               "italic": null,
                               "underline": null,
-                              "color_rgb": null
+                              "color_rgb": "#000000"
                             }
                           }
                         ],
@@ -3203,7 +3203,7 @@
                               "bold": false,
                               "italic": null,
                               "underline": null,
-                              "color_rgb": null
+                              "color_rgb": "#000000"
                             }
                           }
                         ],
