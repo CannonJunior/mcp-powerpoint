@@ -5,8 +5,10 @@ This project provides MCP (Model Context Protocol) tools for converting PowerPoi
 ## Features
 
 - **Complete PowerPoint Analysis**: Extracts all text, shapes, images, tables, positioning, and formatting
+- **Intelligent Shape Naming**: Uses Ollama LLM to generate descriptive names based on content
 - **Pydantic Models**: Type-safe data structures for PowerPoint objects
 - **Roundtrip Conversion**: Original PPTX → JSON → New PPTX with high fidelity
+- **Multiple Client Modes**: Basic demo, extract, refine, rename, and populate workflows
 - **MCP Integration**: Works with any MCP-compatible client
 
 ## Files
@@ -14,9 +16,11 @@ This project provides MCP (Model Context Protocol) tools for converting PowerPoi
 ### Core Components
 - `powerpoint_models.py` - Comprehensive Pydantic models for PowerPoint structure
 - `powerpoint_server.py` - MCP server providing PowerPoint conversion tools
-- `client.py` - Example client demonstrating both sentiment analysis and PowerPoint tools
+- `shape_naming_server.py` - MCP server for generating descriptive shape names using Ollama
+- `client.py` - Basic demo client showing PowerPoint and Shape Naming integration
+- `client_modes.py` - Advanced multi-mode client for specialized workflows
 
-### Tools Available
+### PowerPoint Conversion Tools
 
 #### `pptx_to_json(file_path: str) -> str`
 Converts a PowerPoint file to structured JSON format.
@@ -30,14 +34,85 @@ Creates a PowerPoint file from JSON data.
 - Applies formatting, positioning, and styling
 - Generates a new .pptx file
 
+### Shape Naming Tools (via Ollama)
+
+#### `analyze_shape_content(shape_name: str, shape_text: str, shape_type: str) -> str`
+Analyzes individual shape content and generates descriptive names.
+- Uses Ollama LLM to analyze text content
+- Generates programmatic names (lowercase with underscores)
+- Examples: "Rectangle 5" → "company_header", "TextBox 42" → "project_title"
+
+#### `generate_descriptive_names_for_presentation(json_data: str) -> str`
+Processes entire presentations to rename all shapes.
+- Batch processes all shapes in a presentation
+- Handles duplicate names with numbering
+- Returns updated JSON with `descriptive_name` and `original_name` fields
+
+#### `get_shape_suggestions(shape_text: str, context: str = "") -> str`
+Provides multiple naming suggestions with rationales.
+- Returns 3 different naming options
+- Includes rationale for each suggestion
+- Useful for manual shape naming decisions
+
+#### `batch_rename_shapes(json_data: str, naming_rules: str = "") -> str`
+Advanced batch renaming with custom rules.
+- Supports rule-based renaming patterns
+- Falls back to automatic naming for unmatched shapes
+- Returns detailed rename operation results
+
 ## Usage
 
-### 1. Start the MCP Server
+### 1. Python Client Options
+
+#### Basic Demo Client
+Run the basic client for a comprehensive demo of both PowerPoint and Shape Naming tools:
+```bash
+uv run client.py
+```
+
+This client will:
+- Convert a PowerPoint to JSON
+- Generate descriptive names for all shapes using Ollama
+- Recreate the PowerPoint from JSON
+- Save results to `presentation_with_descriptive_names.json`
+
+#### Advanced Multi-Mode Client
+The `client_modes.py` provides specialized modes for different workflows:
+
+**Extract Mode** - Convert PowerPoint to JSON and recreate:
+```bash
+python client_modes.py extract -i input.pptx
+python client_modes.py extract -i input.pptx --json output.json --pptx recreated.pptx
+```
+
+**Refine Mode** - Improve recreated PowerPoint presentations:
+```bash
+python client_modes.py refine -i recreated.pptx
+```
+
+**Rename Mode** - Generate descriptive shape names with document analysis:
+```bash
+python client_modes.py rename -i presentation.json --content-dir ./docs
+```
+
+**Populate Mode** - Create presentations from templates using document content:
+```bash
+python client_modes.py populate -i template.pptx --naming-json names.json --content-dir ./content
+```
+
+### 2. Direct MCP Server Usage
+
+#### Start the PowerPoint MCP Server
 ```python
 python powerpoint_server.py
 ```
 
-### 2. Use with MCP Client
+#### Start the Shape Naming MCP Server  
+```python
+python shape_naming_server.py
+```
+
+### 3. MCP Tool Integration
 ```python
 # Convert PowerPoint to JSON
 json_result = await client.call_tool("powerpoint_pptx_to_json", {
@@ -49,12 +124,18 @@ pptx_result = await client.call_tool("powerpoint_json_to_pptx", {
     "json_data": json_string,
     "output_path": "output.pptx"
 })
-```
 
-### 3. Example Client
-Run the provided client to see both sentiment analysis and PowerPoint tools:
-```bash
-python client.py
+# Generate descriptive names for all shapes
+naming_result = await client.call_tool("shape_naming_generate_descriptive_names_for_presentation", {
+    "json_data": json_string
+})
+
+# Analyze individual shape content
+shape_name = await client.call_tool("shape_naming_analyze_shape_content", {
+    "shape_name": "Rectangle 5",
+    "shape_text": "General Atomics – Integrated Intelligence, Inc.",
+    "shape_type": "AUTO_SHAPE"
+})
 ```
 
 ## Data Structure
@@ -98,6 +179,8 @@ Successfully tested with `MDA-250083-BNB-20250904.v1.RFI.pptx`:
 - `fastmcp` - MCP server framework
 - `pillow` - Image processing
 - `base64` - Image encoding/decoding
+- `ollama` - Local LLM integration for shape naming
+- `uv` - Fast Python package manager (recommended)
 
 ## Architecture
 

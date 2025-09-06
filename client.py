@@ -22,6 +22,10 @@ async def main():
             "powerpoint": {
                 "command": "python",
                 "args": ["powerpoint_server.py"]
+            },
+            "shape_naming": {
+                "command": "python", 
+                "args": ["shape_naming_server.py"]
             }
         }
     }
@@ -52,7 +56,7 @@ async def main():
         
         # Convert PowerPoint to JSON
         print("Converting PowerPoint to JSON...")
-        json_result = await client.call_tool("pptx_to_json", {
+        json_result = await client.call_tool("powerpoint_pptx_to_json", {
             "file_path": pptx_file
         })
         
@@ -71,11 +75,48 @@ async def main():
             
             # Convert JSON back to PowerPoint
             print("Converting JSON back to PowerPoint...")
-            pptx_result = await client.call_tool("json_to_pptx", {
+            pptx_result = await client.call_tool("powerpoint_json_to_pptx", {
                 "json_data": json_content,
                 "output_path": "demo_recreated.pptx"
             })
             print(f"Recreate result: {pptx_result.content[0].text if hasattr(pptx_result.content[0], 'text') else pptx_result}")
+            
+            # Shape Naming Demo
+            print("\n=== Shape Naming Demo ===")
+            print("Generating descriptive names for all shapes...")
+            naming_result = await client.call_tool("shape_naming_generate_descriptive_names_for_presentation", {
+                "json_data": json_content
+            })
+            
+            if hasattr(naming_result, 'content') and naming_result.content:
+                naming_content = naming_result.content[0].text if hasattr(naming_result.content[0], 'text') else str(naming_result.content[0])
+                
+                # Save the updated JSON with descriptive names
+                with open("presentation_with_descriptive_names.json", 'w', encoding='utf-8') as f:
+                    f.write(naming_content)
+                
+                # Show some examples
+                try:
+                    naming_data = json.loads(naming_content)
+                    print(f"Updated presentation with descriptive names saved to 'presentation_with_descriptive_names.json'")
+                    
+                    # Show first few shape renames as examples
+                    example_count = 0
+                    for slide_idx, slide in enumerate(naming_data.get('slides', [])):
+                        for shape in slide.get('shapes', []):
+                            if 'descriptive_name' in shape and 'original_name' in shape and example_count < 5:
+                                text_preview = ""
+                                if shape.get('text_frame') and shape['text_frame'].get('text'):
+                                    text_preview = shape['text_frame']['text'][:40] + "..."
+                                print(f"  '{shape['original_name']}' -> '{shape['descriptive_name']}' ({text_preview})")
+                                example_count += 1
+                        if example_count >= 5:
+                            break
+                    
+                    if example_count == 0:
+                        print("  No shapes were renamed (this might indicate an issue)")
+                except Exception as e:
+                    print(f"  Error processing naming results: {e}")
         
         # AI delegation (existing code)
         print(f"\n=== AI Delegation ===")
@@ -92,6 +133,13 @@ async def main():
             if chosen in resources_list:
                 result = await client.read_resource(chosen)
                 print(f"\nAI chose {chosen}:\n{result.contents[0].text[:200]}...")
+
+        print(f"\n=== Advanced Modes Available ===")
+        print("For advanced operations, use client_modes.py:")
+        print("  python client_modes.py extract -i input.pptx")
+        print("  python client_modes.py refine -i recreated.pptx")
+        print("  python client_modes.py rename -i presentation.json --content-dir ./docs")
+        print("  python client_modes.py populate -i template.pptx --naming-json names.json --content-dir ./content")
 
 if __name__ == "__main__":
     asyncio.run(main())

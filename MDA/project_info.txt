@@ -1,0 +1,21 @@
+Project 250083 - MDA Advanced Capability Concepts
+
+Award Information:
+- Contract Number: MDA-2024-250083
+- Award Amount: $2.4M
+- Period of Performance: 24 months starting January 2025
+
+Technical Approach:
+Our solution leverages GPU acceleration for SAR image formation, enabling near-real-time intelligence dissemination. This represents a substantial improvement in processing speed while maintaining image quality to support critical decision-making requirements.
+
+Key Technologies:
+- GPU-accelerated SAR processing
+- Real-time image formation
+- Advanced tracking algorithms
+- Autonomous target recognition (ATR)
+
+Team Structure:
+- General Atomics - Integrated Intelligence, Inc. (Prime)
+- Subcontractor partnerships to be determined
+- Technical lead: Dr. Sarah Chen
+- Program Manager: Mike Rodriguez

@@ -1,0 +1,4027 @@
+{
+  "slide_width": 9144000,
+  "slide_height": 6858000,
+  "slides": [
+    {
+      "slide_number": 1,
+      "name": null,
+      "layout": null,
+      "shapes": [
+        {
+          "shape_id": 254,
+          "name": "Picture 6",
+          "shape_type": "PICTURE",
+          "left": 0,
+          "top": 6410160,
+          "width": 9152640,
+          "height": 456840,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": null,
+          "table": null,
+          "image": {
+            "filename": "image.png",
+            "image_data": "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",
+            "content_type": "image/png",
+            "crop_left": 0.0,
+            "crop_top": 0.0,
+            "crop_right": 0.0,
+            "crop_bottom": 0.0
+          },
+          "fill": null,
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_picture",
+          "original_name": "Picture 6"
+        },
+        {
+          "shape_id": 255,
+          "name": "Google Shape;55;p13",
+          "shape_type": "AUTO_SHAPE",
+          "left": 0,
+          "top": 6485400,
+          "width": 837360,
+          "height": 296280,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "runs": [],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_auto_shape",
+          "original_name": "Google Shape;55;p13"
+        },
+        {
+          "shape_id": 256,
+          "name": "Google Shape;56;p13",
+          "shape_type": "AUTO_SHAPE",
+          "left": 0,
+          "top": 6485400,
+          "width": 837360,
+          "height": 296280,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "<number>",
+            "paragraphs": [
+              {
+                "text": "<number>",
+                "runs": [],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "shape_auto_shape",
+          "original_name": "Google Shape;56;p13"
+        },
+        {
+          "shape_id": 257,
+          "name": "Google Shape;58;p13",
+          "shape_type": "AUTO_SHAPE",
+          "left": 2887200,
+          "top": 6473160,
+          "width": 3358440,
+          "height": 333000,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "General Atomics – Integrated Intelligence, Inc. Proprietary Information",
+            "paragraphs": [
+              {
+                "text": "General Atomics – Integrated Intelligence, Inc. Proprietary Information",
+                "runs": [
+                  {
+                    "text": "General Atomics – Integrated Intelligence, Inc. Proprietary Information",
+                    "font": {
+                      "name": "Century Gothic",
+                      "size": 8,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#FFFFFF"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "general_atomics",
+          "original_name": "Google Shape;58;p13"
+        },
+        {
+          "shape_id": 258,
+          "name": "Picture 5",
+          "shape_type": "PICTURE",
+          "left": 6438240,
+          "top": 6461640,
+          "width": 2248920,
+          "height": 338040,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": null,
+          "table": null,
+          "image": {
+            "filename": "image.png",
+            "image_data": "iVBORw0KGgoAAAANSUhEUgAAAVEAAAA0CAYAAAAzOAsfAAAACXBIWXMAAAsSAAALEgHS3X78AAAP50lEQVR4nO2dPYwkRxXH/4cgQALdWCJF28QEt0JCQrLFlUNE4CUiQbpxRuZ1QEB0cwEiQfJeRIJ0fQGBo5tLyJBrJXLPRs6gFwILEXhXQiR8FEH1o2t6qt571V09Zr31k1qz210fr+vj1avPfuCcw8KcAPgegA+XjqhSqVSOzYMjKFEL4E0AX1k6okqlUjk2X1o4/LcAPAbwZQCvFo6rUqlUjs7SlujfAHyj/9sB+BaA6yUjrFQqlWOypCV6jkGBAsADAL9fML5KpVI5Oktaov+E78aPeR/AxVKRViqVyjFZSola+LHQGH8H8PUlIq1UKpVjs0R3/i0A32eefw3AbxaIt1KpVI7OEpbonwF8U3BTJ5kqlcoXgtKW6DlkBQr4SaZt4bgrlUrl6JS2RP8B4KsZ7n8I4HclBahUKpVjUtISfYU8BQoAvy0Yf6VSqRydUkr0BMA7E/ytAPyykAyVSqVydEpaov+e6O+vBWWoVCqVo1JKiV4D+PUEf39BXXhfqVTuMKUnlj6D76JrcPDrSf9QUoBMGgAm+OWwAG4A7Pq/iVPo3zlF11+SDLteBqLprxRW4UYDvffcsKzS3Qo+XXMYpw3A5w29Uyka5KcNyTzF7xgbkcf0v6l06PqLyvQ4/QC5TIbhhOTkoYVcj2zkHsVhGH+Uzx0OZSSaPhySgZM7DMcC2ME5V/L6sdNjC8edc5k+/jmc9mHdzAzHOefOnXMrhbszt/8e3DvsejftbOmc2/ZhbQuEdeHk/JmSNyYSTse4bxVy5FxzZJ6brpTXc8v2hfPlkMI6VfrbuMP00JY7kn3HuLkZhX3mpr8j1aGV83JzZUTDael1oh8C+ETh7l8AnhSOW8s5gI+Q3paqpYNvsR7OFQh+zaxRuBu74d7BJvxMgcKaMnk45j0Aa+b5GvPzBvB5c8I8twXiINaYJ7OZGb8N5JhTtt8D0Ab/nyn9jS23Bvr6beGtv0eMm3BNeQu/EmjqO3Z9fBbAU/BlROIWwC5XiZ71QrRIm94/gO+qc/wK6d1Ka3gTfMPEMZUzAB8UCOcKXkZTIKxr6LrywH5hldxb+MI8p5CEYUnx5ZCqnCuUGyM3wnNbKJ4VfFmdSomGmBrhFzPDAXxDSeXMKP2M6+kmIz6riMf2vy3mGV+38F37C/BKW4sF9BNLp72HV/CV8gl8xT+PuL0G8JoJ6wbAzyP3DfwLvoAvVE/7/9dKGSVW2G9l52D7X1MwLE2rH7a+UtxW4UYDFbwSYRGpxnGDMpY9wMt7hfT4WC7nmNdQaa09DotyZRsY0m6KtWeQp+g0vTALn05ze68WeVayJjxRiZJl8DEOE/QhvFXX4TARfgTfZY/x09H/DXxCfoTD1uEEXqla5E80jDlDuQpq+19TKKwG+oqosRIuUc5Stor4SnAK350shWGe2UJxNPCN/RzMTP+X8IZGiR4HscJ0uTYZbi/7Xy4u6qmV6KFYlDPKKLzoeZ/EGl5wSfGcwCtAysyuv/8zHHadP8HwwboVfCt+rojjMbwifw6fSbFZRImY1TzmFl6hWxxaKg2GGU/b/3JyP1PKRWFpMfCWIdeo2P6Xs3IuoVMm5IazSq6xP7t8Cp9fKWKz4lIleQm9BSF1ka0yHIlWeH4JnTV3GfwtyX45+r+Frmy/hC/TDXTpaBRuiCbwk2O9WsjjobYPN7eRoOHC0J+FXM5u4dOzw2E5Gc/c+3LsDmfV5s5cb9www/dpcP8/zrkTN8yuTZ0Vu3F+Njtn5rRRhNu6/ZlJ6dowYXWZ8uXMoLdOnjU1Sjda+YwQ1njGXXK/HrlfC+4pPTnC9zkX3Obk89Q0uXFyuYvlQc4staZs37hhJYm2vBlBjhiS7Kl4zgQ3a6erH6QXGneYRis3pLWkdygck7gOysI4opzKLAmyds69Fdx75Xxm2kJx7JxeEUiVdOt04YRXifdonS5jQzonKwmNItHGBeeVJEe49Grl+LS5cftKbOXkZWKUzxo3Ut6Ey4HmXFKebTJlprTgaN2hHFI+xwyOjUKuXKQ6FkNTtlZOTuud0zeMczlolKg7f46yg/oP4ccyL+EH8b/dm8lcFy+XR/DDCC/h5ee6+EYIK+wOnYHvKrfwpn6JZThb5M+gn0DupgPHHQ/N+ZLrBvt5tQFf7l4jv/utWfo1hw34PLvGtBl7Izy3mX5uEe++SvFIq2Kucfj+m0T8qbylyWdOlqv+V6ofZ9AP8cVkz+EhfJqa/91xZSwWjk+dc9cLxyFZklxL1o3cSl0SuGktdYyVk1vw3N4BWUAlNgGsnW4TgJZxt18acqAuscaKIKtOyhtt7yV1NU5vOedaopJVFqaFpmzbiHvJ8reCHDun64VZIR7NBpMLJ+dnbs9CssK17FmiFxgGXEtYVyHPAHwXwJsAfgLgFyg7i0iDwK3gjouzC/6WBrk1Vh4tCZLo4FtPzqq8grdWc5ZkWORPTnBhmYy4YzzDMEjfjZ5pZlzbzPiM8NxmhjdmAz5tbzF93ahhntEs9ZjcDQXSRO4W/Aw2hSnpigvwPRQL/VpnjtxJ5guUXeZ0MLE0Z8InZOt8qxm2IjSes3FlrKSN042D5LRk0iA3jS9x1iq9p/bi0oK24WmhiQeudxGbnOAuyTqSIMt4fEkWeC5k1WmspBidm1+Wcgkt0SnjoZKl27n9OqJJc6l3cOZka27jdGVQMx6qsRzX7tDaNr0MrYtvNSY342vtdPppzxINoeU955i2/u0avhWz/f82ePYEvhXYwFsXG0xrDcZLqebyqA+vha5llKxVA521Q+Ow0lKcG3iLVLPDguI1SnccLXRp8hr8dtCn8OUqtM5L7kwaM7U3ZRVulpIZkBfd2wlhnmA4fEMqt4CvW9J6bCu4uYZPp1YIA5DHQ7VW5gvwu7VouaEN4t5Fwm+gW49+tfdfREPT1Th9qx5bdhRriaw7bNm1yyI6d3gAh+ZqlOFLUOspWataJIvRucGK0FqDlAelxkOltLNON0Y4Hreaa93GMG5e3oytmaUtZ+f2LdFWcNsk5CotDycH5SOXFlRHS4yHwpUZwzROf5iKhr3eFbdjqYNvKd4G/1XO570GD1vp1H7ix9hvcS285n8Xfiwpxi18S3KKaR+361Dmq6K2/zUFwtKMrYYtsWXchVjImwC0UFiSmw7yGOCjwI1mZ9Jl4pIwCjcpuLKlsZynykwY5hm3TZXbYp3Dc8h5bvvflCyXGLZxSj0sLh5gyI8pdT4W39wdj8ThigfHt77htXH7rYt1h4t4Na3qeJwmHKMYWyg0tpprfY6vUzffOtOMh2qhlkwaDw3TRoIs5RItd+d01lFoSWl6LZrezV4rP7okWabmjTTDK1nO3OoQSWZNbyk2pleybLdKOcjKNInnVFe5MkhlS0rT8B01ZSsF5a1UljXcuMjqjlxl1PTCcN1qjdnMVZTG+UJ5IOzMa+pC/65/58aVW+5jnDxJMU5jSUFQRZ5T4AiqtJ3gbpxvElJlpwo2RSHN6cpzSkp6r/HmgSlKdC24k4axppZt6/brmSQHuYuV3bBOc7K0CjfW7b/fyk07c7Vzg/EjlWWJrUsYjaVPtge86SwN7t/Cm9dd6cgVNBhO/KaLsP1vh+HE7yn79CuVzwM6OCR2ZGJYli3uZtk+xfB+TeQ5vdMOw4QaQfveT/u/x/vgubAsmLQqrUTPoN+98hpljgGrVCqVz42SSnQFr7VzFtO/jbInjFcqlcpRKfl5kHPk70Zact1dpVKpLE4pJdpAd6bhGFroXqlUKncS7lDmHDr4gdcp6xM1+8wradaIN0Rtf50ibfFbDOs3uXAa5K/BpAH5KY1ri+FbOLFwU2EaxNes2sR9wA9DxdYidhjSY9X/TSd8pco5fVFgh+E7ZFN6WxZe3gukJz9MIFtM/vBchgY+zQzSu5ZC2Wl/+RTZtxP93VlKKVFg+NJgDs9RlehczhBfDUEF2SSej1kn3G0gH/0WY8fIJkFHjcX8cuUlFR+3YDsVT9f/nsIrNY2BQOG8g+HrA1PefwuvHLlNCQbDt4dicbzsf9fQfaEilH3LhCvRTvBzpyk5JmqRt3tizmk3lQGTuL8VngP7lSRVYW4w7eQtK8Qt+U2t3LCMv1R8nB8ungZ6BRrzn5KnhN9V/5tyZ+GVOH34UcvcDxPaif7uLKW/O3+O9PbNmNu7tk7t/41U1zLcbmiEMFaMm9cK/yn+iGnKl7qVKaVuE/dTB2xIRxOaxP0tvFU1RYFK78BxDZ0So25+yp3F9O74CtNl7yb4u9OU7M4Dw1f5pBOgrnAPzf4FMIn7oRUqKQFawBzDMs84LgF8J/FMqmgtEycppxgpP5aJq0Fc0V9BViSxD/2RDC0jj6TUKUxpDTUtOE/JD0xThBbzZb9XlFaigO+ir8FbIVMmGyqHSF1eowjjVAgntGYM4uPeVzicAGkTYW6YZ6GblDwpTGE/qTJ6i+GLqxybxP0L5hnRQLbiuR6EBV/HXmKYvKNGiXbw7Bj5NLLfO0p35wkpA+1C8d43YpZGaC1odoQ1iHeDqVsZYhJh2Mi9lNsXABxz5cYzRTbJz5Z5dgHdZGjK/1Pw798wfkMeM+4s8+wZhjN/Q6v+JriX8quR/d6xxN55wuKwkt/CJ3QdC52PQdwqfAlfSVYAPos85z4eFgsnxCKuuMc7zxoAf1LEMeYS/r1ShfJB4n4qvlvwH11LLct7wMjwRu/vFPEPL17CN16xtJe4hn+XFvEDy8eHc6fy8g0mfpI/RarcSMR6I/eCpSxRIL7m8AJVgZZialfeQnfOpR39z40Rjt1OPRPBgh8PTZHywy1tSk3KvUZaGdxiKL9cnKlnErb/TaVfO/o/NanIKTOp/hnheQo70d+dZ0kl2mE4lh+Y/hnZShyTuG+F51voCvzYTSq8mHJLuX0X3spLXRvG72PEu5DcxNiThJ+G8WMhfzIY4BuxVNjPwL//GmnlTh8tlLDC83Psvx+NiW/6/03C3/vgZb+38xxLKlHAW550qvx64bjuE6nlPOEJ6Fwll8b0YiepGya8MSm33HgoWUg5VuyUNY20OiDlxzJ+H2LYTcSNR6fClsYUpcmiDvJXGiRF+wF8d53i/Bj+5DVK91T8Hwiy31uWmJ0PuYEvcGe4x+b+ApjEfdv/NojP7pICkbp0NnJPipNIWVISFrqPqY39NMhbj0pKJvZxPZpM4yzRx0gPa9Aay5x3IOhzMKlGhOTeIf2+cxbKz5X93rK0JQr4cZz1EeK5T5jEfat8fgO+4NvR/1zlGrtNxS1hJ/gt7cf2vzfwW5JzmSLPOG5p3Nkmno/d5Co2i3lj2feWpS1Rok4mlSc2FknWSpN43o7cpvJl3CVMhRcbFlgl3EpYeCs2x+8WvuLn+LGMn/C9zzEcdsJZZ2RB2onyhHGn3j9MZ8uEH8pvMJxBkLJcqWey68NdM2FzaMZqv7D8FxTi5EcEd/VXAAAAAElFTkSuQmCC",
+            "content_type": "image/png",
+            "crop_left": 0.0,
+            "crop_top": 0.0,
+            "crop_right": 0.0,
+            "crop_bottom": 0.0
+          },
+          "fill": null,
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_picture_2",
+          "original_name": "Picture 5"
+        },
+        {
+          "shape_id": 259,
+          "name": "Picture 4",
+          "shape_type": "PICTURE",
+          "left": 7632000,
+          "top": 338760,
+          "width": 1344240,
+          "height": 581760,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": null,
+          "table": null,
+          "image": {
+            "filename": "image.png",
+            "image_data": "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",
+            "content_type": "image/png",
+            "crop_left": 0.0,
+            "crop_top": 0.0,
+            "crop_right": 0.0,
+            "crop_bottom": 0.0
+          },
+          "fill": null,
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_picture_3",
+          "original_name": "Picture 4"
+        },
+        {
+          "shape_id": 260,
+          "name": "Google Shape;109;p25",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4377960,
+          "top": 5216400,
+          "width": 4765320,
+          "height": 986040,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "runs": [],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_auto_shape_2",
+          "original_name": "Google Shape;109;p25"
+        },
+        {
+          "shape_id": 261,
+          "name": "Google Shape;100;p 1",
+          "shape_type": "AUTO_SHAPE",
+          "left": 156600,
+          "top": 656280,
+          "width": 4141800,
+          "height": 347040,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "250083 – MDA Advanced Capability Concepts",
+            "paragraphs": [
+              {
+                "text": "250083 – MDA Advanced Capability Concepts",
+                "runs": [
+                  {
+                    "text": "250083 – MDA Advanced Capability Concepts",
+                    "font": {
+                      "name": "Arial",
+                      "size": 14,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#FFFFFF"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 173520,
+            "margin_bottom": 173520,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#000000",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "shape_auto_shape_2",
+          "original_name": "Google Shape;100;p 1"
+        },
+        {
+          "shape_id": 262,
+          "name": "Google Shape;100;p 2",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4305960,
+          "top": 1003680,
+          "width": 1215720,
+          "height": 347040,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Award: N/A",
+            "paragraphs": [
+              {
+                "text": "Award: N/A",
+                "runs": [
+                  {
+                    "text": "Award: N/A",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 173520,
+            "margin_bottom": 173520,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "shape_auto_shape_3",
+          "original_name": "Google Shape;100;p 2"
+        },
+        {
+          "shape_id": 263,
+          "name": "Google Shape;100;p 3",
+          "shape_type": "AUTO_SHAPE",
+          "left": 5506200,
+          "top": 1003680,
+          "width": 1288800,
+          "height": 347040,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "PoP: N/A",
+            "paragraphs": [
+              {
+                "text": "PoP: N/A",
+                "runs": [
+                  {
+                    "text": "PoP: N/A",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 173520,
+            "margin_bottom": 173520,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "shape_auto_shape_4",
+          "original_name": "Google Shape;100;p 3"
+        },
+        {
+          "shape_id": 264,
+          "name": "Google Shape;100;p 4",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4298760,
+          "top": 308880,
+          "width": 2175840,
+          "height": 347040,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Due: Indefinite",
+            "paragraphs": [
+              {
+                "text": "Due: Indefinite",
+                "runs": [
+                  {
+                    "text": "Due: Indefinite",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 173520,
+            "margin_bottom": 173520,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "indefinite",
+          "original_name": "Google Shape;100;p 4"
+        },
+        {
+          "shape_id": 265,
+          "name": "TextBox 140",
+          "shape_type": "AUTO_SHAPE",
+          "left": 7625160,
+          "top": 108000,
+          "width": 1343160,
+          "height": 290160,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Recommend",
+            "paragraphs": [
+              {
+                "text": "Recommend",
+                "runs": [
+                  {
+                    "text": "Recommend",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "recommend",
+          "original_name": "TextBox 140"
+        },
+        {
+          "shape_id": 266,
+          "name": "TextBox 141",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4312080,
+          "top": 703440,
+          "width": 3353040,
+          "height": 289800,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Command and Control, Integrated Intelligence (C2I2)",
+            "paragraphs": [
+              {
+                "text": "Command and Control, Integrated Intelligence (C2I2)",
+                "runs": [
+                  {
+                    "text": "Command and Control, Integrated Intelligence (C2I2)",
+                    "font": {
+                      "name": "Arial",
+                      "size": 10,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "command_and",
+          "original_name": "TextBox 141"
+        },
+        {
+          "shape_id": 267,
+          "name": "TextBox 142",
+          "shape_type": "AUTO_SHAPE",
+          "left": 156600,
+          "top": 1041120,
+          "width": 2285640,
+          "height": 289800,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Opportunity Vision",
+            "paragraphs": [
+              {
+                "text": "Opportunity Vision",
+                "runs": [
+                  {
+                    "text": "Opportunity Vision",
+                    "font": {
+                      "name": "Arial",
+                      "size": 14,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "opportunity_vision",
+          "original_name": "TextBox 142"
+        },
+        {
+          "shape_id": 268,
+          "name": "Google Shape;100;p 5",
+          "shape_type": "AUTO_SHAPE",
+          "left": 156600,
+          "top": 1352160,
+          "width": 4141800,
+          "height": 2473560,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "For the Missile Defense Agency\u000bWho is responsible for a comprehensive missile defeat approach to defend the United States,\u000bC2I2\u000bIs GPU acceleration of SAR image formation\u000bThat enables near-real-time intelligence dissemination\u000bUnlike current ATR processing\u000bOur Solution demonstrates substantial improvement in processing speed, while maintaining or enhancing image quality, thereby supporting timely decision making requirements.",
+            "paragraphs": [
+              {
+                "text": "For the Missile Defense Agency\u000bWho is responsible for a comprehensive missile defeat approach to defend the United States,\u000bC2I2\u000bIs GPU acceleration of SAR image formation\u000bThat enables near-real-time intelligence dissemination\u000bUnlike current ATR processing\u000bOur Solution demonstrates substantial improvement in processing speed, while maintaining or enhancing image quality, thereby supporting timely decision making requirements.",
+                "runs": [
+                  {
+                    "text": "For ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "the Missile Defense Agency",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "Who ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "is responsible for ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "a comprehensive missile defeat approach to defend the United States,",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "C2I2",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "Is ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "GPU acceleration of SAR image formation",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "That ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "enables near-real-time intelligence dissemination",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "Unlike ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "current ATR processing",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "Our Solution ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "demonstrates substantial improvement in processing speed, while maintaining or enhancing image quality, thereby supporting timely decision making requirements.",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D4E4FA",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "for_the",
+          "original_name": "Google Shape;100;p 5"
+        },
+        {
+          "shape_id": 269,
+          "name": "Google Shape;100;p 6",
+          "shape_type": "AUTO_SHAPE",
+          "left": 275400,
+          "top": 4049640,
+          "width": 4023000,
+          "height": 797040,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Needs this stage? 1) Scope/teaming/concept determination; 2) Title Page, ExecSum, Program Description, Milestones, Prior Work, ROM, Quad chart",
+            "paragraphs": [
+              {
+                "text": "Needs this stage? 1) Scope/teaming/concept determination; 2) Title Page, ExecSum, Program Description, Milestones, Prior Work, ROM, Quad chart",
+                "runs": [
+                  {
+                    "text": "Needs this stage? 1) ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "Scope/teaming/concept determination; ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "2)",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": " Title Page, ExecSum, Program Description, Milestones, Prior Work, ROM, Quad chart",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "needs_this",
+          "original_name": "Google Shape;100;p 6"
+        },
+        {
+          "shape_id": 270,
+          "name": "Rectangle 145",
+          "shape_type": "AUTO_SHAPE",
+          "left": 156600,
+          "top": 4049640,
+          "width": 118440,
+          "height": 797040,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "runs": [],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#00FF00",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_auto_shape_3",
+          "original_name": "Rectangle 145"
+        },
+        {
+          "shape_id": 271,
+          "name": "Google Shape;100;p 7",
+          "shape_type": "AUTO_SHAPE",
+          "left": 275400,
+          "top": 4837320,
+          "width": 4023000,
+          "height": 804240,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Alignment/Are we the right team? This determination is still TBD, pending identification of a team (GA affiliates, GA with partners, or GA-Intelligence alone)",
+            "paragraphs": [
+              {
+                "text": "Alignment/Are we the right team? This determination is still TBD, pending identification of a team (GA affiliates, GA with partners, or GA-Intelligence alone)",
+                "runs": [
+                  {
+                    "text": "Alignment/Are we the right team? ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "This determination is still TBD, pending identification of a team (GA affiliates, GA with partners, or GA-Intelligence alone)",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "we",
+          "original_name": "Google Shape;100;p 7"
+        },
+        {
+          "shape_id": 272,
+          "name": "Rectangle 147",
+          "shape_type": "AUTO_SHAPE",
+          "left": 156600,
+          "top": 4837320,
+          "width": 118440,
+          "height": 804240,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "runs": [],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#FCD54E",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_auto_shape_4",
+          "original_name": "Rectangle 147"
+        },
+        {
+          "shape_id": 273,
+          "name": "Google Shape;100;p 8",
+          "shape_type": "AUTO_SHAPE",
+          "left": 275400,
+          "top": 5641920,
+          "width": 4023000,
+          "height": 585000,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Win Themes: GC2 technology; trackers, COFFEE, track fusion, and CTP; GLADIS and/or autonomy",
+            "paragraphs": [
+              {
+                "text": "Win Themes: GC2 technology; trackers, COFFEE, track fusion, and CTP; GLADIS and/or autonomy",
+                "runs": [
+                  {
+                    "text": "Win Themes: ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "GC2 technology; trackers, COFFEE, track fusion, and CTP; GLADIS and/or autonomy",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "win",
+          "original_name": "Google Shape;100;p 8"
+        },
+        {
+          "shape_id": 274,
+          "name": "Rectangle 149",
+          "shape_type": "AUTO_SHAPE",
+          "left": 156600,
+          "top": 5641920,
+          "width": 118440,
+          "height": 585000,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "runs": [],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#00FF00",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_auto_shape_5",
+          "original_name": "Rectangle 149"
+        },
+        {
+          "shape_id": 275,
+          "name": "Google Shape;100;p 9",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4595400,
+          "top": 1524960,
+          "width": 4388760,
+          "height": 600480,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Staffing/Schedule: Concept development, no commitment to staff or schedule. 2-Step submission process.",
+            "paragraphs": [
+              {
+                "text": "Staffing/Schedule: Concept development, no commitment to staff or schedule. 2-Step submission process.",
+                "runs": [
+                  {
+                    "text": "Staffing/Schedule: ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "Concept development, no commitment to staff or schedule. ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "2-Step submission process.",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "concept",
+          "original_name": "Google Shape;100;p 9"
+        },
+        {
+          "shape_id": 276,
+          "name": "Google Shape;100;p 10",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4595400,
+          "top": 2112120,
+          "width": 4388760,
+          "height": 641520,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Risks: Low risk; 10-page (ExecSum + Program Description) concept white paper delivered to MDA.",
+            "paragraphs": [
+              {
+                "text": "Risks: Low risk; 10-page (ExecSum + Program Description) concept white paper delivered to MDA.",
+                "runs": [
+                  {
+                    "text": "Risks: ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "Low risk; 10-page (ExecSum + Program Description) concept white paper delivered to MDA.",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "low",
+          "original_name": "Google Shape;100;p 10"
+        },
+        {
+          "shape_id": 277,
+          "name": "Rectangle 153",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4485960,
+          "top": 2112120,
+          "width": 118440,
+          "height": 642240,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "runs": [],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#00FF00",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_auto_shape_6",
+          "original_name": "Rectangle 153"
+        },
+        {
+          "shape_id": 278,
+          "name": "Google Shape;100;p 11",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4595400,
+          "top": 2724840,
+          "width": 4388760,
+          "height": 622800,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Portfolio Goals: Technology for strategic business opportunities",
+            "paragraphs": [
+              {
+                "text": "Portfolio Goals: Technology for strategic business opportunities",
+                "runs": [
+                  {
+                    "text": "Portfolio Goals: ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "Technology for strategic business opportunities",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "portfolio",
+          "original_name": "Google Shape;100;p 11"
+        },
+        {
+          "shape_id": 279,
+          "name": "Rectangle 155",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4485960,
+          "top": 2724840,
+          "width": 118440,
+          "height": 622800,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "runs": [],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#00FF00",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_auto_shape_7",
+          "original_name": "Rectangle 155"
+        },
+        {
+          "shape_id": 280,
+          "name": "Google Shape;100;p 12",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4595400,
+          "top": 3311280,
+          "width": 4388760,
+          "height": 622800,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Strategic Goals: #2 Open Aperture for New Tech and Customers.",
+            "paragraphs": [
+              {
+                "text": "Strategic Goals: #2 Open Aperture for New Tech and Customers.",
+                "runs": [
+                  {
+                    "text": "Strategic Goals: ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "#2 Open Aperture for New Tech and Customers.",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "strategic",
+          "original_name": "Google Shape;100;p 12"
+        },
+        {
+          "shape_id": 281,
+          "name": "Rectangle 157",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4485960,
+          "top": 3311280,
+          "width": 118440,
+          "height": 622800,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "runs": [],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#00FF00",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_auto_shape_8",
+          "original_name": "Rectangle 157"
+        },
+        {
+          "shape_id": 282,
+          "name": "Google Shape;100;p 13",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4595400,
+          "top": 3887280,
+          "width": 4388760,
+          "height": 1153080,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Financials: \n● C2C – TBD\n● Rev– TBD\n● GA-i3 Rev– TBD\n● Gross Margin – TBD\n",
+            "paragraphs": [
+              {
+                "text": "Financials: ",
+                "runs": [
+                  {
+                    "text": "Financials:",
+                    "font": {
+                      "name": "Century Gothic",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": " ",
+                    "font": {
+                      "name": "Century Gothic",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              },
+              {
+                "text": "● C2C – TBD",
+                "runs": [
+                  {
+                    "text": "● ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "C2C – TBD",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              },
+              {
+                "text": "● Rev– TBD",
+                "runs": [
+                  {
+                    "text": "● ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "Rev",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "– ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "TBD",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              },
+              {
+                "text": "● GA-i3 Rev– TBD",
+                "runs": [
+                  {
+                    "text": "● ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "GA-i3",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": " Rev",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "– ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "TBD",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              },
+              {
+                "text": "● Gross Margin – TBD",
+                "runs": [
+                  {
+                    "text": "● ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "Gross Margin",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": " – ",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "TBD",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              },
+              {
+                "text": "",
+                "runs": [],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "shape_auto_shape_5",
+          "original_name": "Google Shape;100;p 13"
+        },
+        {
+          "shape_id": 283,
+          "name": "Rectangle 159",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4485960,
+          "top": 3887280,
+          "width": 118440,
+          "height": 1153080,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "runs": [],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#FCD54E",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_auto_shape_9",
+          "original_name": "Rectangle 159"
+        },
+        {
+          "shape_id": 284,
+          "name": "Google Shape;100;p 15",
+          "shape_type": "AUTO_SHAPE",
+          "left": 311040,
+          "top": 381240,
+          "width": 374400,
+          "height": 273960,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "LL",
+            "paragraphs": [
+              {
+                "text": "LL",
+                "runs": [
+                  {
+                    "text": "LL",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 137160,
+            "margin_bottom": 137160,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "ll",
+          "original_name": "Google Shape;100;p 15"
+        },
+        {
+          "shape_id": 285,
+          "name": "Google Shape;100;p 16",
+          "shape_type": "AUTO_SHAPE",
+          "left": 685800,
+          "top": 381240,
+          "width": 548280,
+          "height": 273960,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "dRFI",
+            "paragraphs": [
+              {
+                "text": "dRFI",
+                "runs": [
+                  {
+                    "text": "dRFI",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 137160,
+            "margin_bottom": 137160,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "drfi",
+          "original_name": "Google Shape;100;p 16"
+        },
+        {
+          "shape_id": 286,
+          "name": "Google Shape;100;p 17",
+          "shape_type": "AUTO_SHAPE",
+          "left": 2263680,
+          "top": 381240,
+          "width": 502560,
+          "height": 273960,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "RFP",
+            "paragraphs": [
+              {
+                "text": "RFP",
+                "runs": [
+                  {
+                    "text": "RFP",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 137160,
+            "margin_bottom": 137160,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "rfp",
+          "original_name": "Google Shape;100;p 17"
+        },
+        {
+          "shape_id": 287,
+          "name": "Google Shape;100;p 18",
+          "shape_type": "AUTO_SHAPE",
+          "left": 2761560,
+          "top": 381240,
+          "width": 594000,
+          "height": 273960,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Other",
+            "paragraphs": [
+              {
+                "text": "Other",
+                "runs": [
+                  {
+                    "text": "Other",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 137160,
+            "margin_bottom": 137160,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "other",
+          "original_name": "Google Shape;100;p 18"
+        },
+        {
+          "shape_id": 288,
+          "name": "Google Shape;100;p 19",
+          "shape_type": "AUTO_SHAPE",
+          "left": 1235880,
+          "top": 381240,
+          "width": 438840,
+          "height": 273960,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "RFI",
+            "paragraphs": [
+              {
+                "text": "RFI",
+                "runs": [
+                  {
+                    "text": "RFI",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 137160,
+            "margin_bottom": 137160,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#FF0000",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "rfi",
+          "original_name": "Google Shape;100;p 19"
+        },
+        {
+          "shape_id": 289,
+          "name": "TextBox 169",
+          "shape_type": "AUTO_SHAPE",
+          "left": 462240,
+          "top": 6510600,
+          "width": 2751840,
+          "height": 261000,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "MDA-250083-BNB-20250904.v1.RFI",
+            "paragraphs": [
+              {
+                "text": "MDA-250083-BNB-20250904.v1.RFI",
+                "runs": [
+                  {
+                    "text": "MDA-250083-BNB-20250904.v1.RFI",
+                    "font": {
+                      "name": "Arial",
+                      "size": 10,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#FFFFFF"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "shape_auto_shape_6",
+          "original_name": "TextBox 169"
+        },
+        {
+          "shape_id": 290,
+          "name": "Rectangle 1",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4485960,
+          "top": 1524960,
+          "width": 118440,
+          "height": 587160,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "",
+            "paragraphs": [
+              {
+                "text": "",
+                "runs": [],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#00FF00",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_auto_shape_10",
+          "original_name": "Rectangle 1"
+        },
+        {
+          "shape_id": 291,
+          "name": "Google Shape;100;p 21",
+          "shape_type": "AUTO_SHAPE",
+          "left": 6858000,
+          "top": 896040,
+          "width": 2286000,
+          "height": 600480,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "To Be Briefed: TBD\u000bApproval: TBD\u000bGoldenrod: Not yet required",
+            "paragraphs": [
+              {
+                "text": "To Be Briefed: TBD\u000bApproval: TBD\u000bGoldenrod: Not yet required",
+                "runs": [
+                  {
+                    "text": "To Be Briefed: TBD",
+                    "font": {
+                      "name": "Arial",
+                      "size": 10,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "Approval: TBD",
+                    "font": {
+                      "name": "Arial",
+                      "size": 10,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  },
+                  {
+                    "text": "Goldenrod: Not yet required",
+                    "font": {
+                      "name": "Arial",
+                      "size": 10,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#FFFFFF",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "to_be",
+          "original_name": "Google Shape;100;p 21"
+        },
+        {
+          "shape_id": 292,
+          "name": "Google Shape;100;p 22",
+          "shape_type": "AUTO_SHAPE",
+          "left": 4473000,
+          "top": 5248440,
+          "width": 4507920,
+          "height": 978480,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Successful Outcome: Shape GDA requirements and MDA leader towards architectures/solutions and/or contracts aligned with our current and developing technology",
+            "paragraphs": [
+              {
+                "text": "Successful Outcome: Shape GDA requirements and MDA leader towards architectures/solutions and/or contracts aligned with our current and developing technology",
+                "runs": [
+                  {
+                    "text": "Successful Outcome: Shape GDA requirements and MDA leader towards architectures/solutions and/or contracts aligned with our current and developing technology",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 91440,
+            "margin_right": 91440,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D4E4FA",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "successful",
+          "original_name": "Google Shape;100;p 22"
+        },
+        {
+          "shape_id": 293,
+          "name": "Google Shape;100;p 14",
+          "shape_type": "AUTO_SHAPE",
+          "left": 1673280,
+          "top": 381240,
+          "width": 585360,
+          "height": 273960,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "dRFP",
+            "paragraphs": [
+              {
+                "text": "dRFP",
+                "runs": [
+                  {
+                    "text": "dRFP",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 137160,
+            "margin_bottom": 137160,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "SOLID",
+            "fore_color": "#D6D6D6",
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": "#000000",
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "drfp",
+          "original_name": "Google Shape;100;p 14"
+        }
+      ],
+      "notes": "(U) The Government is interested in exploring the potential of GPU acceleration to reduce SAR image formation processing timelines. This effort aims to leverage the parallel processing capabilities of GPUs, to develop innovative software solutions that can efficiently handle the computational demands of SAR image formation, ultimately enabling near-real-time intelligence dissemination from space-based assets. The Government seeks proposals for ground-based software solutions that can demonstrate substantial improvements in processing speed while maintaining or enhancing image quality, thereby supporting timely decision-making requirements.\n(U//FOUO) Objectives: 1. Implement and optimize SAR image formation algorithms for GPU architectures achieving Threshold Performance: Processing time of 45 seconds (plus others). 2. Conduct comprehensive performance analysis to characterize data movement patterns and bottlenecks within GPU processing units (plus others). 3. Evaluate image quality metrics in comparison to load level RRS-E processing to ensure suitability for downstream ATR applications, including Clutter-to-Noise Ratio (plus others). 4. Explain trade space considerations and perform trade studies examining the interdependencies of: Algorithm selection (e.g. Polar Formatting, Chirp Scaling, Omega-K, Backprojection, Range Migration, etc.) (plus others).",
+      "slide_id": 256,
+      "background_fill": null,
+      "advance_time": null,
+      "transition_type": null,
+      "transition_duration": null
+    },
+    {
+      "slide_number": 2,
+      "name": null,
+      "layout": null,
+      "shapes": [
+        {
+          "shape_id": 294,
+          "name": "PlaceHolder 1",
+          "shape_type": "PLACEHOLDER",
+          "left": 0,
+          "top": 0,
+          "width": 9143280,
+          "height": 913680,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "250068 - Toretto RFP",
+            "paragraphs": [
+              {
+                "text": "250068 - Toretto RFP",
+                "runs": [
+                  {
+                    "text": "250068 - Toretto RFP",
+                    "font": {
+                      "name": "Century Gothic",
+                      "size": 24,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "shape_placeholder",
+          "original_name": "PlaceHolder 1"
+        },
+        {
+          "shape_id": 295,
+          "name": "Google Shape;105;p25",
+          "shape_type": "AUTO_SHAPE",
+          "left": -2520,
+          "top": 915840,
+          "width": 7230240,
+          "height": 1458360,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Response Staffing\n{propose who will be needed for the response and LOE}",
+            "paragraphs": [
+              {
+                "text": "Response Staffing",
+                "runs": [
+                  {
+                    "text": "Response Staffing",
+                    "font": {
+                      "name": "Century Gothic",
+                      "size": 16,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              },
+              {
+                "text": "{propose who will be needed for the response and LOE}",
+                "runs": [
+                  {
+                    "text": "{propose who will be needed for the response and LOE}",
+                    "font": {
+                      "name": "Century Gothic",
+                      "size": 16,
+                      "bold": false,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "response_staffing",
+          "original_name": "Google Shape;105;p25"
+        },
+        {
+          "shape_id": 296,
+          "name": "Table 2",
+          "shape_type": "TABLE",
+          "left": 207720,
+          "top": 1535040,
+          "width": 8443440,
+          "height": 1483200,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": null,
+          "table": {
+            "rows": 4,
+            "columns": 3,
+            "cells": [
+              [
+                {
+                  "text": "Named Personnel ",
+                  "text_frame": {
+                    "text": "Named Personnel ",
+                    "paragraphs": [
+                      {
+                        "text": "Named Personnel ",
+                        "runs": [
+                          {
+                            "text": "Named Personnel ",
+                            "font": {
+                              "name": "Arial",
+                              "size": 14,
+                              "bold": true,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#FFFFFF"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "Est. Hours",
+                  "text_frame": {
+                    "text": "Est. Hours",
+                    "paragraphs": [
+                      {
+                        "text": "Est. Hours",
+                        "runs": [
+                          {
+                            "text": "Est. Hours",
+                            "font": {
+                              "name": "Arial",
+                              "size": 14,
+                              "bold": true,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#FFFFFF"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "Deliverables",
+                  "text_frame": {
+                    "text": "Deliverables",
+                    "paragraphs": [
+                      {
+                        "text": "Deliverables",
+                        "runs": [
+                          {
+                            "text": "Deliverables",
+                            "font": {
+                              "name": "Arial",
+                              "size": 14,
+                              "bold": true,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#FFFFFF"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                }
+              ],
+              [
+                {
+                  "text": "Junior Cannon",
+                  "text_frame": {
+                    "text": "Junior Cannon",
+                    "paragraphs": [
+                      {
+                        "text": "Junior Cannon",
+                        "runs": [
+                          {
+                            "text": "Junior Cannon",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "6",
+                  "text_frame": {
+                    "text": "6",
+                    "paragraphs": [
+                      {
+                        "text": "6",
+                        "runs": [
+                          {
+                            "text": "6",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "Assist GA-ASI with white paper development",
+                  "text_frame": {
+                    "text": "Assist GA-ASI with white paper development",
+                    "paragraphs": [
+                      {
+                        "text": "Assist GA-ASI with white paper development",
+                        "runs": [
+                          {
+                            "text": "Assist GA-ASI with white paper development",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                }
+              ],
+              [
+                {
+                  "text": "Andy Cochrane",
+                  "text_frame": {
+                    "text": "Andy Cochrane",
+                    "paragraphs": [
+                      {
+                        "text": "Andy Cochrane",
+                        "runs": [
+                          {
+                            "text": "Andy Cochrane",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "2",
+                  "text_frame": {
+                    "text": "2",
+                    "paragraphs": [
+                      {
+                        "text": "2",
+                        "runs": [
+                          {
+                            "text": "2",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "White paper review (as desired)",
+                  "text_frame": {
+                    "text": "White paper review (as desired)",
+                    "paragraphs": [
+                      {
+                        "text": "White paper review (as desired)",
+                        "runs": [
+                          {
+                            "text": "White paper review (as desired)",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                }
+              ],
+              [
+                {
+                  "text": "Poway Support",
+                  "text_frame": {
+                    "text": "Poway Support",
+                    "paragraphs": [
+                      {
+                        "text": "Poway Support",
+                        "runs": [
+                          {
+                            "text": "Poway Support",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "2",
+                  "text_frame": {
+                    "text": "2",
+                    "paragraphs": [
+                      {
+                        "text": "2",
+                        "runs": [
+                          {
+                            "text": "2",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "File movement/creation ",
+                  "text_frame": {
+                    "text": "File movement/creation ",
+                    "paragraphs": [
+                      {
+                        "text": "File movement/creation ",
+                        "runs": [
+                          {
+                            "text": "File movement/creation ",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                }
+              ]
+            ]
+          },
+          "image": null,
+          "fill": null,
+          "line": null,
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_table",
+          "original_name": "Table 2"
+        },
+        {
+          "shape_id": 297,
+          "name": "Table 4",
+          "shape_type": "TABLE",
+          "left": 210960,
+          "top": 3479040,
+          "width": 8475480,
+          "height": 2733120,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": null,
+          "table": {
+            "rows": 6,
+            "columns": 2,
+            "cells": [
+              [
+                {
+                  "text": "Other Logistics",
+                  "text_frame": {
+                    "text": "Other Logistics",
+                    "paragraphs": [
+                      {
+                        "text": "Other Logistics",
+                        "runs": [
+                          {
+                            "text": "Other Logistics",
+                            "font": {
+                              "name": "Arial",
+                              "size": 14,
+                              "bold": true,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#FFFFFF"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "Details",
+                  "text_frame": {
+                    "text": "Details",
+                    "paragraphs": [
+                      {
+                        "text": "Details",
+                        "runs": [
+                          {
+                            "text": "Details",
+                            "font": {
+                              "name": "Arial",
+                              "size": 14,
+                              "bold": true,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#FFFFFF"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                }
+              ],
+              [
+                {
+                  "text": "Win Theme(s)",
+                  "text_frame": {
+                    "text": "Win Theme(s)",
+                    "paragraphs": [
+                      {
+                        "text": "Win Theme(s)",
+                        "runs": [
+                          {
+                            "text": "Win Theme(s)",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "GA-ASI experience, DS platform with Volans and Sailfish, BD Apps context.",
+                  "text_frame": {
+                    "text": "GA-ASI experience, DS platform with Volans and Sailfish, BD Apps context.",
+                    "paragraphs": [
+                      {
+                        "text": "GA-ASI experience, DS platform with Volans and Sailfish, BD Apps context.",
+                        "runs": [
+                          {
+                            "text": "GA-ASI experience, DS platform with Volans and Sailfish, BD Apps context.",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                }
+              ],
+              [
+                {
+                  "text": "Our contribution/solution",
+                  "text_frame": {
+                    "text": "Our contribution/solution",
+                    "paragraphs": [
+                      {
+                        "text": "Our contribution/solution",
+                        "runs": [
+                          {
+                            "text": "Our contribution/solution",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "Add our history of Chantilly client, cloud-native processing to GA-ASI's SAR expertise.",
+                  "text_frame": {
+                    "text": "Add our history of Chantilly client, cloud-native processing to GA-ASI's SAR expertise.",
+                    "paragraphs": [
+                      {
+                        "text": "Add our history of Chantilly client, cloud-native processing to GA-ASI's SAR expertise.",
+                        "runs": [
+                          {
+                            "text": "Add our history of Chantilly client, cloud-native processing to GA-ASI's SAR expertise.",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                }
+              ],
+              [
+                {
+                  "text": "Why do we want to bid?",
+                  "text_frame": {
+                    "text": "Why do we want to bid?",
+                    "paragraphs": [
+                      {
+                        "text": "Why do we want to bid?",
+                        "runs": [
+                          {
+                            "text": "Why do we want to bid?",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "Expand our tech to other directorates within the Chantilly client. Advance GA-ASI's ability to partner on future work.",
+                  "text_frame": {
+                    "text": "Expand our tech to other directorates within the Chantilly client. Advance GA-ASI's ability to partner on future work.",
+                    "paragraphs": [
+                      {
+                        "text": "Expand our tech to other directorates within the Chantilly client. Advance GA-ASI's ability to partner on future work.",
+                        "runs": [
+                          {
+                            "text": "Expand our tech to other directorates within the Chantilly client. Advance GA-ASI's ability to partner on future work.",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                }
+              ],
+              [
+                {
+                  "text": "What stage is this solicitation?",
+                  "text_frame": {
+                    "text": "What stage is this solicitation?",
+                    "paragraphs": [
+                      {
+                        "text": "What stage is this solicitation?",
+                        "runs": [
+                          {
+                            "text": "What stage is this solicitation?",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "RFP",
+                  "text_frame": {
+                    "text": "RFP",
+                    "paragraphs": [
+                      {
+                        "text": "RFP",
+                        "runs": [
+                          {
+                            "text": "RFP",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                }
+              ],
+              [
+                {
+                  "text": "Team makeup",
+                  "text_frame": {
+                    "text": "Team makeup",
+                    "paragraphs": [
+                      {
+                        "text": "Team makeup",
+                        "runs": [
+                          {
+                            "text": "Team makeup",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                },
+                {
+                  "text": "GA-Intelligence provides staff assistance, augmenting GA-ASI's proposal. ",
+                  "text_frame": {
+                    "text": "GA-Intelligence provides staff assistance, augmenting GA-ASI's proposal. ",
+                    "paragraphs": [
+                      {
+                        "text": "GA-Intelligence provides staff assistance, augmenting GA-ASI's proposal. ",
+                        "runs": [
+                          {
+                            "text": "GA-Intelligence provides staff assistance, augmenting GA-ASI's proposal. ",
+                            "font": {
+                              "name": "Arial",
+                              "size": 12,
+                              "bold": false,
+                              "italic": null,
+                              "underline": null,
+                              "color_rgb": "#000000"
+                            }
+                          }
+                        ],
+                        "format": null
+                      }
+                    ],
+                    "margin_left": 91440,
+                    "margin_right": 91440,
+                    "margin_top": 45720,
+                    "margin_bottom": 45720,
+                    "word_wrap": null,
+                    "auto_size": null
+                  },
+                  "fill_color": null,
+                  "border_color": null,
+                  "border_width": null
+                }
+              ]
+            ]
+          },
+          "image": null,
+          "fill": null,
+          "line": null,
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_table_2",
+          "original_name": "Table 4"
+        },
+        {
+          "shape_id": 298,
+          "name": "Google Shape;105;p25",
+          "shape_type": "AUTO_SHAPE",
+          "left": -2520,
+          "top": 3038040,
+          "width": 7230240,
+          "height": 411840,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Detailed Alignment Questions",
+            "paragraphs": [
+              {
+                "text": "Detailed Alignment Questions",
+                "runs": [
+                  {
+                    "text": "Detailed Alignment Questions",
+                    "font": {
+                      "name": "Century Gothic",
+                      "size": 16,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 91440,
+            "margin_bottom": 91440,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "detailed_alignment",
+          "original_name": "Google Shape;105;p25"
+        },
+        {
+          "shape_id": 299,
+          "name": "Picture 210",
+          "shape_type": "PICTURE",
+          "left": 7327800,
+          "top": 372960,
+          "width": 1371240,
+          "height": 585000,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": null,
+          "table": null,
+          "image": {
+            "filename": "image.png",
+            "image_data": "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",
+            "content_type": "image/png",
+            "crop_left": 0.0,
+            "crop_top": 0.0,
+            "crop_right": 0.0,
+            "crop_bottom": 0.0
+          },
+          "fill": null,
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "empty_picture_4",
+          "original_name": "Picture 210"
+        },
+        {
+          "shape_id": 300,
+          "name": "TextBox 211",
+          "shape_type": "AUTO_SHAPE",
+          "left": 7341840,
+          "top": 144360,
+          "width": 1343160,
+          "height": 290160,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Recommend",
+            "paragraphs": [
+              {
+                "text": "Recommend",
+                "runs": [
+                  {
+                    "text": "Recommend",
+                    "font": {
+                      "name": "Arial",
+                      "size": 12,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#000000"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "recommend_2",
+          "original_name": "TextBox 211"
+        },
+        {
+          "shape_id": 301,
+          "name": "TextBox 212",
+          "shape_type": "AUTO_SHAPE",
+          "left": 6867360,
+          "top": 932400,
+          "width": 2397600,
+          "height": 373680,
+          "rotation": 0.0,
+          "z_order": null,
+          "text_frame": {
+            "text": "Briefed: Fed BD 2025-07-21\u000bGoldenrod: Not required this stage",
+            "paragraphs": [
+              {
+                "text": "Briefed: Fed BD 2025-07-21\u000bGoldenrod: Not required this stage",
+                "runs": [
+                  {
+                    "text": "Briefed: Fed BD 2025-07-21",
+                    "font": {
+                      "name": "Arial",
+                      "size": 10,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#B7B7B7"
+                    }
+                  },
+                  {
+                    "text": "Goldenrod: Not required this stage",
+                    "font": {
+                      "name": "Arial",
+                      "size": 10,
+                      "bold": true,
+                      "italic": null,
+                      "underline": null,
+                      "color_rgb": "#B7B7B7"
+                    }
+                  }
+                ],
+                "format": null
+              }
+            ],
+            "margin_left": 90000,
+            "margin_right": 90000,
+            "margin_top": 45000,
+            "margin_bottom": 45000,
+            "word_wrap": null,
+            "auto_size": null
+          },
+          "table": null,
+          "image": null,
+          "fill": {
+            "fill_type": "BACKGROUND",
+            "fore_color": null,
+            "back_color": null,
+            "transparency": null
+          },
+          "line": {
+            "color": null,
+            "width": 0,
+            "dash_style": null,
+            "transparency": null
+          },
+          "shadow": null,
+          "auto_shape_type": null,
+          "adjustments": {},
+          "shapes": null,
+          "click_action": null,
+          "hyperlink": null,
+          "descriptive_name": "fed",
+          "original_name": "TextBox 212"
+        }
+      ],
+      "notes": "",
+      "slide_id": 257,
+      "background_fill": null,
+      "advance_time": null,
+      "transition_type": null,
+      "transition_duration": null
+    }
+  ],
+  "slide_masters": [],
+  "core_properties": {
+    "title": "BNB – {Opp # Opp Name}",
+    "author": "Johnson, Alan",
+    "subject": "",
+    "keywords": "",
+    "comments": "",
+    "created": "2023-06-21T18:35:42",
+    "modified": "2025-09-05T15:45:51",
+    "last_modified_by": ""
+  },
+  "theme_name": null,
+  "color_scheme": {},
+  "font_scheme": {},
+  "slide_size_type": null
+}
