@@ -333,5 +333,9 @@ def batch_rename_shapes(json_data: str, naming_rules: str = "") -> str:
             "error": f"Batch rename failed: {str(e)}"
         })
 
-if __name__ == "__main__":
+def main():
+    """Main entry point for the MCP server"""
     mcp.run()
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,8 @@
+README_POWERPOINT_TOOLS.md
+pyproject.toml
+mcp_powerpoint.egg-info/PKG-INFO
+mcp_powerpoint.egg-info/SOURCES.txt
+mcp_powerpoint.egg-info/dependency_links.txt
+mcp_powerpoint.egg-info/entry_points.txt
+mcp_powerpoint.egg-info/requires.txt
+mcp_powerpoint.egg-info/top_level.txt

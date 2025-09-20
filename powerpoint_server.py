@@ -631,5 +631,9 @@ def apply_font_formatting(font, font_data: FontInfo):
     except Exception as e:
         print(f"Warning: Failed to apply font formatting: {str(e)}")
 
-if __name__ == "__main__":
+def main():
+    """Main entry point for the MCP server"""
     mcp.run()
+
+if __name__ == "__main__":
+    main()

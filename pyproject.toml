@@ -1,8 +1,8 @@
 [project]
 name = "mcp-powerpoint"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
+description = "MCP server for PowerPoint file manipulation and shape naming using Ollama LLM"
+readme = "README_POWERPOINT_TOOLS.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastmcp>=2.12.2",
@@ -12,4 +12,31 @@ dependencies = [
     "python-pptx>=1.0.2",
     "torch>=2.8.0",
     "transformers>=4.56.1",
+]
+
+[project.scripts]
+mcp-powerpoint-server = "powerpoint_server:main"
+mcp-shape-naming-server = "shape_naming_server:main"
+
+[tool.mcp.servers.powerpoint]
+command = "uv"
+args = ["run", "powerpoint_server.py"]
+description = "PowerPoint file conversion and manipulation tools"
+
+[tool.mcp.servers.shape-naming]
+command = "uv"
+args = ["run", "shape_naming_server.py"]
+description = "Shape naming tools using Ollama LLM"
+
+[tool.uv.workspace]
+members = [
+    ".",
+]
+
+[tool.uv.sources]
+mcp-powerpoint = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "mcp-powerpoint",
 ]
