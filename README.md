@@ -6,9 +6,51 @@ This project provides MCP (Model Context Protocol) tools for converting PowerPoi
 
 To use this project as an MCP server in external applications, add the following configuration to your `mcpServers` configuration:
 
-### Method 1: Using uv (Recommended)
+### Method 1: From GitHub Repository (Recommended)
 
-Add to your MCP client configuration (e.g., Claude Code settings or other MCP clients):
+Install directly from GitHub - no local setup required:
+
+```json
+{
+  "mcpServers": {
+    "mcp-powerpoint": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/CannonJunior/mcp-powerpoint.git", "mcp-powerpoint", "--server", "powerpoint"],
+      "env": {}
+    },
+    "mcp-shape-naming": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/CannonJunior/mcp-powerpoint.git", "mcp-powerpoint", "--server", "shape-naming"],
+      "env": {}
+    }
+  }
+}
+```
+
+### Method 2: From PyPI (When Published)
+
+Once published to PyPI, you can use the simple form:
+
+```json
+{
+  "mcpServers": {
+    "mcp-powerpoint": {
+      "command": "uvx",
+      "args": ["mcp-powerpoint", "--server", "powerpoint"],
+      "env": {}
+    },
+    "mcp-shape-naming": {
+      "command": "uvx",
+      "args": ["mcp-powerpoint", "--server", "shape-naming"],
+      "env": {}
+    }
+  }
+}
+```
+
+### Method 3: Local Development
+
+For local development, you can use uv directly:
 
 ```json
 {
@@ -19,7 +61,10 @@ Add to your MCP client configuration (e.g., Claude Code settings or other MCP cl
         "--directory",
         "/path/to/mcp-powerpoint",
         "run",
-        "powerpoint_server.py"
+        "-m",
+        "mcp_powerpoint",
+        "--server",
+        "powerpoint"
       ],
       "env": {}
     },
@@ -29,7 +74,10 @@ Add to your MCP client configuration (e.g., Claude Code settings or other MCP cl
         "--directory",
         "/path/to/mcp-powerpoint",
         "run",
-        "shape_naming_server.py"
+        "-m",
+        "mcp_powerpoint",
+        "--server",
+        "shape-naming"
       ],
       "env": {}
     }
@@ -37,62 +85,43 @@ Add to your MCP client configuration (e.g., Claude Code settings or other MCP cl
 }
 ```
 
-### Method 2: Using Python directly
+### Quick Start
 
-```json
-{
-  "mcpServers": {
-    "mcp-powerpoint": {
-      "command": "python",
-      "args": ["/path/to/mcp-powerpoint/powerpoint_server.py"],
-      "env": {}
-    },
-    "mcp-shape-naming": {
-      "command": "python",
-      "args": ["/path/to/mcp-powerpoint/shape_naming_server.py"],
-      "env": {}
-    }
-  }
-}
-```
+1. **Install uvx**: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+2. **Copy the configuration** from `mcp-config.json` to your MCP client settings
+3. **For shape naming**: Install Ollama and pull a model: `ollama pull llama3.2`
+4. **That's it!** - uvx installs from GitHub automatically
 
-### Method 3: Using installed package scripts
-
-If you install the package with `uv add /path/to/mcp-powerpoint`:
-
-```json
-{
-  "mcpServers": {
-    "mcp-powerpoint": {
-      "command": "mcp-powerpoint-server",
-      "args": [],
-      "env": {}
-    },
-    "mcp-shape-naming": {
-      "command": "mcp-shape-naming-server",
-      "args": [],
-      "env": {}
-    }
-  }
-}
+**Test the installation**:
+```bash
+uvx --from git+https://github.com/CannonJunior/mcp-powerpoint.git mcp-powerpoint --help
 ```
 
 ### Prerequisites
 
-1. **Install dependencies**: Ensure `uv` is installed and the project dependencies are available
-2. **Ollama setup** (for shape naming): Install and configure Ollama with a supported model (e.g., `ollama pull llama3.2`)
-3. **Update paths**: Replace `/path/to/mcp-powerpoint` with the actual path to your cloned repository
+- **UV/UVX**: Required for running the servers (`curl -LsSf https://astral.sh/uv/install.sh | sh`)
+- **Ollama** (shape naming only): Install from https://ollama.ai and run `ollama pull llama3.2`
+- **No Python setup required** - uvx manages everything in isolated environments!
 
 ### Testing the Configuration
 
 To verify the MCP servers are working correctly:
 
-1. Start the servers manually:
+1. Test from GitHub:
+   ```bash
+   # Test PowerPoint server
+   uvx --from git+https://github.com/CannonJunior/mcp-powerpoint.git mcp-powerpoint --server powerpoint
+
+   # Test shape naming server
+   uvx --from git+https://github.com/CannonJunior/mcp-powerpoint.git mcp-powerpoint --server shape-naming
+   ```
+
+2. For local development:
    ```bash
    cd /path/to/mcp-powerpoint
-   uv run powerpoint_server.py
+   uv run -m mcp_powerpoint --server powerpoint
    # In another terminal:
-   uv run shape_naming_server.py
+   uv run -m mcp_powerpoint --server shape-naming
    ```
 
 2. Check that they respond to MCP protocol messages and expose the expected tools:

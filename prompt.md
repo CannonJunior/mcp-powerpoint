@@ -1,3 +1,0 @@
-# Project Prompt
-
-Create a new mcp server that will be used by client.py. This new mcp server will have tools that are used during the creation of the presentation_data.json file. In that file, the "name" fields all corresponds to generic shape names. Create mcp tools that help create more descriptive names to all shapes. These names should be general descriptions, based on the text found within the shapes. Invoke a locally run ollama model with a query to make a determination on what each name should be. We will later add tools that reads documents in a folder and decides what data from the documents should go into each text field, primarily based on these names.

@@ -1,9 +1,23 @@
 [project]
 name = "mcp-powerpoint"
-version = "0.1.0"
+version = "1.0.0"
 description = "MCP server for PowerPoint file manipulation and shape naming using Ollama LLM"
-readme = "README_POWERPOINT_TOOLS.md"
+readme = "README.md"
 requires-python = ">=3.12"
+license = "MIT"
+authors = [
+    {name = "MCP PowerPoint Tools"}
+]
+keywords = ["mcp", "powerpoint", "pptx", "json", "llm", "ollama", "shape-naming"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Office/Business :: Office Suites",
+    "Topic :: Text Processing :: Markup"
+]
 dependencies = [
     "fastmcp>=2.12.2",
     "ollama>=0.5.3",
@@ -14,18 +28,25 @@ dependencies = [
     "transformers>=4.56.1",
 ]
 
+[tool.setuptools.packages.find]
+include = ["mcp_powerpoint*"]
+
 [project.scripts]
-mcp-powerpoint-server = "powerpoint_server:main"
-mcp-shape-naming-server = "shape_naming_server:main"
+mcp-powerpoint = "mcp_powerpoint.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/your-username/mcp-powerpoint"
+Repository = "https://github.com/your-username/mcp-powerpoint.git"
+Issues = "https://github.com/your-username/mcp-powerpoint/issues"
 
 [tool.mcp.servers.powerpoint]
-command = "uv"
-args = ["run", "powerpoint_server.py"]
+command = "uvx"
+args = ["mcp-powerpoint", "--server", "powerpoint"]
 description = "PowerPoint file conversion and manipulation tools"
 
 [tool.mcp.servers.shape-naming]
-command = "uv"
-args = ["run", "shape_naming_server.py"]
+command = "uvx"
+args = ["mcp-powerpoint", "--server", "shape-naming"]
 description = "Shape naming tools using Ollama LLM"
 
 [tool.uv.workspace]

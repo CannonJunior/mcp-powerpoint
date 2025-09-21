@@ -1,3 +1,2 @@
 [console_scripts]
-mcp-powerpoint-server = powerpoint_server:main
-mcp-shape-naming-server = shape_naming_server:main
+mcp-powerpoint = mcp_powerpoint.__main__:main

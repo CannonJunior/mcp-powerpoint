@@ -21,7 +21,7 @@ from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
 from PIL import Image
 
-from powerpoint_models import (
+from .powerpoint_models import (
     Presentation, Slide, Shape, TextFrame, Paragraph, TextRun, 
     FontInfo, ParagraphFormat, TableInfo, TableCell, ImageInfo,
     FillFormat, LineFormat, ShadowFormat, DocumentProperties,

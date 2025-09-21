@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "mcp-powerpoint": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/CannonJunior/mcp-powerpoint.git", "mcp-powerpoint", "--server", "powerpoint"],
+      "env": {}
+    },
+    "mcp-shape-naming": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/CannonJunior/mcp-powerpoint.git", "mcp-powerpoint", "--server", "shape-naming"],
+      "env": {}
+    }
+  }
+}

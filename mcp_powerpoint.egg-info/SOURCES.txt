@@ -1,5 +1,11 @@
-README_POWERPOINT_TOOLS.md
+LICENSE
+README.md
 pyproject.toml
+mcp_powerpoint/__init__.py
+mcp_powerpoint/__main__.py
+mcp_powerpoint/powerpoint_models.py
+mcp_powerpoint/powerpoint_server.py
+mcp_powerpoint/shape_naming_server.py
 mcp_powerpoint.egg-info/PKG-INFO
 mcp_powerpoint.egg-info/SOURCES.txt
 mcp_powerpoint.egg-info/dependency_links.txt
