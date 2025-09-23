@@ -1,0 +1,82 @@
+{
+  "title": "Enhanced PowerPoint Presentation",
+  "author": "MCP PowerPoint Tools",
+  "slides": [
+    {
+      "slide_number": 1,
+      "slide_layout": "Title and Content",
+      "width": 7620000,
+      "height": 5715000,
+      "shapes": [
+        {
+          "shape_id": 1,
+          "name": "Title 1",
+          "descriptive_name": "project_status_overview_title",
+          "shape_type": "TEXT_BOX",
+          "left": 1270000,
+          "top": 1270000,
+          "width": 5080000,
+          "height": 1143000,
+          "text_frame": {
+            "text": "Project Status Overview",
+            "font_size": 44,
+            "font_name": "Calibri",
+            "bold": true
+          },
+          "confidence_score": 0.95,
+          "context_analysis": "Title indicating project status reporting",
+          "semantic_tags": ["title", "project", "status", "overview"]
+        },
+        {
+          "shape_id": 2,
+          "name": "Content Placeholder 2",
+          "descriptive_name": "quarterly_results_description",
+          "shape_type": "TEXT_BOX",
+          "left": 1270000,
+          "top": 2540000,
+          "width": 5080000,
+          "height": 1905000,
+          "text_frame": {
+            "text": "This presentation shows our quarterly results and upcoming goals.",
+            "font_size": 18,
+            "font_name": "Calibri",
+            "bold": false
+          },
+          "confidence_score": 0.88,
+          "context_analysis": "Content describing quarterly results and future objectives",
+          "semantic_tags": ["content", "quarterly", "results", "goals"]
+        },
+        {
+          "shape_id": 3,
+          "name": "TextBox 3",
+          "descriptive_name": "key_achievements_summary",
+          "shape_type": "TEXT_BOX",
+          "left": 1270000,
+          "top": 4445000,
+          "width": 5080000,
+          "height": 635000,
+          "text_frame": {
+            "text": "Key achievements this quarter include improved efficiency and customer satisfaction.",
+            "font_size": 16,
+            "font_name": "Calibri",
+            "bold": false
+          },
+          "confidence_score": 0.92,
+          "context_analysis": "Summary of quarterly achievements and improvements",
+          "semantic_tags": ["achievements", "efficiency", "customer", "satisfaction"]
+        }
+      ]
+    }
+  ],
+  "processing_metadata": {
+    "processed_at": "2025-09-22T21:48:43.479978",
+    "naming_strategy": "hybrid",
+    "rag_enhanced": true,
+    "total_shapes": 3,
+    "confidence_scores": {
+      "average": 0.92,
+      "min": 0.88,
+      "max": 0.95
+    }
+  }
+}

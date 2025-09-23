@@ -1,0 +1,33 @@
+Project Overview: PowerPoint Automation System
+
+This document provides an overview of the PowerPoint automation project that uses Model Context Protocol (MCP) to enable intelligent document processing.
+
+Key Features:
+- PowerPoint to JSON conversion with high fidelity
+- Intelligent shape naming using large language models
+- Document context analysis for improved content generation
+- Retrieval-augmented generation (RAG) for enhanced naming accuracy
+
+Business Objectives:
+- Automate presentation creation workflows
+- Improve content quality through AI-assisted naming
+- Enable batch processing of presentations
+- Provide context-aware content suggestions
+
+Technical Architecture:
+- MCP server implementation using FastMCP framework
+- Vector database for document embedding storage
+- Ollama integration for local language model processing
+- Python-based document processing pipeline
+
+Strategic Goals:
+- Reduce manual effort in presentation creation
+- Enhance content consistency across documents
+- Enable intelligent content recommendations
+- Support multiple document formats and sources
+
+Target Users:
+- Business analysts creating data presentations
+- Content creators developing training materials
+- Marketing teams producing client presentations
+- Technical writers documenting system architectures

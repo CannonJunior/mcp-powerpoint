@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Editor Test</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .slide-canvas {
+            width: 800px;
+            height: 600px;
+            border: 2px solid #333;
+            background: white;
+            position: relative;
+            margin: 20px auto;
+        }
+        .shape-element {
+            position: absolute;
+            border: 2px solid #007bff;
+            background-color: rgba(0, 123, 255, 0.1);
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .shape-element:hover {
+            border-color: #0056b3;
+            background-color: rgba(0, 123, 255, 0.2);
+        }
+        .shape-content {
+            font-size: 12px;
+            padding: 2px;
+            overflow: hidden;
+        }
+        .shape-name-overlay {
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 10px;
+        }
+        .badge {
+            background: #6c757d;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Shape Editor Test</h1>
+        <button @click="loadTestData">Load Test Data</button>
+
+        <div v-if="editingPresentation">
+            <h2>Slide 1</h2>
+            <div class="slide-canvas">
+                <div v-for="(shape, index) in editingPresentation.slides[0].shapes" :key="index"
+                     class="shape-element"
+                     :style="getShapeStyle(shape)"
+                     @click="selectShape(shape)">
+
+                    <div class="shape-content">
+                        <small v-if="shape.text_frame && shape.text_frame.text">
+                            {{ shape.text_frame.text.substring(0, 20) }}...
+                        </small>
+                        <small v-else>
+                            {{ shape.shape_type }}
+                        </small>
+                    </div>
+
+                    <div class="shape-name-overlay">
+                        <span class="badge">
+                            {{ shape.descriptive_name || shape.name }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div v-if="selectedShape" style="margin: 20px; padding: 20px; border: 1px solid #ccc;">
+                <h3>Selected Shape</h3>
+                <p><strong>Name:</strong> {{ selectedShape.name }}</p>
+                <p><strong>Descriptive Name:</strong>
+                    <input v-model="selectedShape.descriptive_name" style="width: 300px;">
+                </p>
+                <p><strong>Type:</strong> {{ selectedShape.shape_type }}</p>
+                <p><strong>Position:</strong> Left: {{ selectedShape.left }}, Top: {{ selectedShape.top }}</p>
+                <p><strong>Size:</strong> Width: {{ selectedShape.width }}, Height: {{ selectedShape.height }}</p>
+                <p v-if="selectedShape.text_frame"><strong>Text:</strong> {{ selectedShape.text_frame.text }}</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    editingPresentation: null,
+                    selectedShape: null
+                };
+            },
+            methods: {
+                async loadTestData() {
+                    try {
+                        const response = await fetch('http://localhost:8001/api/jobs/54733983-7fe2-4c55-a9ea-e1cb49c66c56/presentation');
+                        this.editingPresentation = await response.json();
+                        console.log('Loaded data:', this.editingPresentation);
+                    } catch (error) {
+                        console.error('Error:', error);
+                    }
+                },
+
+                selectShape(shape) {
+                    this.selectedShape = shape;
+                    console.log('Selected shape:', shape);
+                },
+
+                getShapeStyle(shape) {
+                    // Scale PowerPoint EMU to canvas pixels
+                    // Use actual slide dimensions from the presentation
+                    const slideWidth = this.editingPresentation.slides[0].width;
+                    const slideHeight = this.editingPresentation.slides[0].height;
+                    const canvasWidth = 800;
+                    const canvasHeight = 600;
+
+                    const scaleX = canvasWidth / slideWidth;
+                    const scaleY = canvasHeight / slideHeight;
+
+                    const left = Math.round((shape.left || 0) * scaleX);
+                    const top = Math.round((shape.top || 0) * scaleY);
+                    const width = Math.max(50, Math.round((shape.width || 100000) * scaleX));
+                    const height = Math.max(20, Math.round((shape.height || 50000) * scaleY));
+
+                    return {
+                        left: `${left}px`,
+                        top: `${top}px`,
+                        width: `${width}px`,
+                        height: `${height}px`
+                    };
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>

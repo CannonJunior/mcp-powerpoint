@@ -1,0 +1,44 @@
+{
+  "slide_width": 9144000,
+  "slide_height": 6858000,
+  "slides": [
+    {
+      "slide_number": 1,
+      "name": "Slide 1",
+      "shapes": [
+        {
+          "shape_id": 1,
+          "name": "Title 1",
+          "shape_type": "TEXT_BOX",
+          "left": 1000000,
+          "top": 1000000,
+          "width": 7000000,
+          "height": 1000000,
+          "text_frame": {
+            "text": "Project Status Overview",
+            "paragraphs": [
+              {
+                "text": "Project Status Overview",
+                "runs": [
+                  {
+                    "text": "Project Status Overview",
+                    "font": {
+                      "name": "Arial",
+                      "size": 24,
+                      "bold": true
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "core_properties": {
+    "title": "Test Presentation",
+    "author": "MCP PowerPoint Tools",
+    "created": "2025-01-20T10:00:00Z"
+  }
+}

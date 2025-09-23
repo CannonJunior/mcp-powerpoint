@@ -1,0 +1,24 @@
+PowerPoint Presentation Context Document
+
+This document provides context for enhancing PowerPoint shape naming.
+
+Project Overview:
+The MCP PowerPoint project aims to improve business presentations through intelligent shape naming.
+Shapes should have meaningful, descriptive names that reflect their content and purpose.
+
+Common Shape Types:
+- Title boxes should be named based on the title content
+- Content boxes should reflect the information they contain
+- Charts and graphs should indicate the data they represent
+- Images should describe what they show
+
+Best Practices:
+- Use snake_case for shape names
+- Include the slide purpose in shape names
+- Avoid generic names like "Rectangle 1" or "TextBox 2"
+- Make names searchable and meaningful
+
+Example Transformations:
+- "Rectangle 1" → "project_status_title"
+- "TextBox 2" → "quarterly_revenue_summary"
+- "Picture 3" → "team_org_chart"

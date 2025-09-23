@@ -6,6 +6,7 @@ Pydantic models for PowerPoint structure serialization
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any, Union
 from enum import Enum
+from datetime import datetime
 import base64
 
 class ShapeType(str, Enum):
@@ -118,32 +119,41 @@ class Shape(BaseModel):
     height: int
     rotation: Optional[float] = None
     z_order: Optional[int] = None
-    
+
     # Text content
     text_frame: Optional[TextFrame] = None
-    
+
     # Table content
     table: Optional[TableInfo] = None
-    
+
     # Image content
     image: Optional[ImageInfo] = None
-    
+
     # Formatting
     fill: Optional[FillFormat] = None
     line: Optional[LineFormat] = None
     shadow: Optional[ShadowFormat] = None
-    
+
     # Auto shape properties
     auto_shape_type: Optional[str] = None
     adjustments: Dict[str, float] = {}
-    
+
     # Group properties
     shapes: Optional[List['Shape']] = None  # For grouped shapes
-    
+
     # Additional properties
     click_action: Optional[str] = None
     hyperlink: Optional[str] = None
-    
+
+    # RAG Enhancement Fields
+    descriptive_name: Optional[str] = None
+    original_name: Optional[str] = None
+    semantic_tags: List[str] = Field(default_factory=list)
+    confidence_score: Optional[float] = None
+    context_analysis: Optional[str] = None
+    document_references: List[str] = Field(default_factory=list)
+    naming_rationale: Optional[str] = None
+
     model_config = {"arbitrary_types_allowed": True}
 
 class SlideLayout(BaseModel):
@@ -183,24 +193,46 @@ class DocumentProperties(BaseModel):
     modified: Optional[str] = None  # ISO datetime string
     last_modified_by: Optional[str] = None
 
+class DocumentContext(BaseModel):
+    """Document context for RAG system"""
+    source_documents: List[str] = Field(default_factory=list)
+    extracted_entities: List[str] = Field(default_factory=list)
+    key_concepts: List[str] = Field(default_factory=list)
+    document_type: Optional[str] = None
+    confidence_metrics: Dict[str, float] = Field(default_factory=dict)
+
+class ProcessingMetadata(BaseModel):
+    """Processing metadata for tracking"""
+    processing_timestamp: datetime = Field(default_factory=datetime.utcnow)
+    processing_version: str = "1.0.0"
+    llm_model_used: Optional[str] = None
+    processing_time_ms: Optional[int] = None
+    quality_score: Optional[float] = None
+
 class Presentation(BaseModel):
     """Complete PowerPoint presentation"""
     slide_width: int
     slide_height: int
     slides: List[Slide] = []
     slide_masters: List[SlideMaster] = []
-    
+
     # Document properties
     core_properties: Optional[DocumentProperties] = None
-    
+
     # Theme and styling
     theme_name: Optional[str] = None
     color_scheme: Dict[str, str] = {}  # Named colors to RGB hex
     font_scheme: Dict[str, str] = {}   # Named fonts
-    
+
     # Presentation-level settings
     slide_size_type: Optional[str] = None  # SCREEN_4X3, SCREEN_16X9, etc.
-    
+
+    # RAG Enhancement Fields
+    document_context: Optional[DocumentContext] = None
+    processing_metadata: Optional[ProcessingMetadata] = None
+    shape_naming_rules: Optional[Dict[str, str]] = None
+    semantic_structure: Optional[Dict[str, Any]] = None
+
     model_config = {"json_encoders": {}}
 
 # Update forward reference

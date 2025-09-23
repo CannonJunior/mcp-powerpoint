@@ -8,13 +8,15 @@ import sys
 import argparse
 from .powerpoint_server import main as powerpoint_main
 from .shape_naming_server import main as shape_naming_main
+from .rag_server import main as rag_main
+from .web_server import main as web_main
 
 
 def main():
     parser = argparse.ArgumentParser(description="MCP PowerPoint Tools")
     parser.add_argument(
         "--server",
-        choices=["powerpoint", "shape-naming"],
+        choices=["powerpoint", "shape-naming", "rag", "web"],
         required=True,
         help="Which server to launch"
     )
@@ -25,6 +27,10 @@ def main():
         powerpoint_main()
     elif args.server == "shape-naming":
         shape_naming_main()
+    elif args.server == "rag":
+        rag_main()
+    elif args.server == "web":
+        web_main()
     else:
         print(f"Unknown server: {args.server}", file=sys.stderr)
         sys.exit(1)

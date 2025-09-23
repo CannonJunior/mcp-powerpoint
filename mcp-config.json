@@ -9,6 +9,11 @@
       "command": "uvx",
       "args": ["--from", "git+https://github.com/CannonJunior/mcp-powerpoint.git", "mcp-powerpoint", "--server", "shape-naming"],
       "env": {}
+    },
+    "mcp-rag": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/CannonJunior/mcp-powerpoint.git", "mcp-powerpoint", "--server", "rag"],
+      "env": {}
     }
   }
 }
