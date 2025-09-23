@@ -266,6 +266,8 @@ body {
     }
 }
 
+/* No mobile responsive settings - always side by side */
+
 /* Loading States */
 .loading-overlay {
     position: absolute;
@@ -363,6 +365,22 @@ body {
 /* Shape Editor Styles */
 .slide-canvas {
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    min-height: 400px;
+    max-width: 100%;
+    aspect-ratio: 4/3; /* Maintain PowerPoint aspect ratio */
+}
+
+/* REBUILT: Simple horizontal layout overrides */
+.card-body {
+    overflow-x: auto !important;
+}
+
+/* Ensure no responsive behavior interferes */
+@media (max-width: 768px) {
+    .card-body > div[style*="display: flex"] {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+    }
 }
 
 .shape-element {
@@ -371,15 +389,21 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.shape-element:hover {
+.shape-element:hover,
+.shape-element:focus {
     border-color: var(--primary-color) !important;
     border-width: 2px !important;
     background-color: rgba(0, 123, 255, 0.2) !important;
     transform: scale(1.02);
     z-index: 10;
+    outline: none;
 }
 
-.shape-element.selected {
+.shape-element:focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+.shape-element.selected-shape {
     border-color: var(--warning-color) !important;
     border-width: 3px !important;
     background-color: rgba(255, 193, 7, 0.2) !important;
@@ -412,7 +436,7 @@ body {
 }
 
 .slide-container {
-    min-width: 850px;
+    min-width: 100%;
 }
 
 /* Shape Editor Form Styles */
@@ -445,7 +469,7 @@ body {
     background: rgba(0, 123, 255, 0.05);
 }
 
-.shape-element.selected::before {
+.shape-element.selected-shape::before {
     border-color: rgba(255, 193, 7, 0.6);
     background: rgba(255, 193, 7, 0.1);
 }

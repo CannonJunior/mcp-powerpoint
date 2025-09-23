@@ -154,6 +154,9 @@ class Shape(BaseModel):
     document_references: List[str] = Field(default_factory=list)
     naming_rationale: Optional[str] = None
 
+    # Context-driven content generation
+    context: Optional[str] = None  # Detailed description of what this shape represents
+
     model_config = {"arbitrary_types_allowed": True}
 
 class SlideLayout(BaseModel):
@@ -173,10 +176,14 @@ class Slide(BaseModel):
     shapes: List[Shape] = []
     notes: Optional[str] = None
     slide_id: Optional[int] = None
-    
+
+    # Slide dimensions (for Shape Editor compatibility)
+    width: Optional[int] = None
+    height: Optional[int] = None
+
     # Background properties
     background_fill: Optional[FillFormat] = None
-    
+
     # Timing and transitions
     advance_time: Optional[float] = None
     transition_type: Optional[str] = None

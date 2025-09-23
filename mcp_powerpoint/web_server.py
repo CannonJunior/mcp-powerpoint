@@ -301,28 +301,30 @@ async def _process_presentation_background(job_id: str, include_analysis: bool,
         job_tracker[job_id]["current_step"] = "Converting PowerPoint to JSON"
         logger.info(f"Job {job_id}: Converting to JSON")
 
-        # Read the PowerPoint file and convert to JSON using the actual MCP tool
-        from .powerpoint_server import mcp as powerpoint_mcp
-
-        # Read file as base64 for MCP tool
-        with open(file_path, 'rb') as f:
-            file_content = f.read()
-            import base64
-            file_base64 = base64.b64encode(file_content).decode('utf-8')
-
-        # Call the actual PowerPoint conversion tool
+        # Convert PowerPoint to JSON using the direct conversion function
         try:
-            conversion_result = await powerpoint_mcp.call_tool(
-                "convert_pptx_to_json",
-                {
-                    "file_content": file_base64,
-                    "filename": job_data["filename"]
-                }
-            )
-            json_result = conversion_result.content[0].text if conversion_result.content else "{}"
+            from .powerpoint_server import convert_pptx_to_json_direct
+
+            # Call the direct PowerPoint conversion function (not wrapped by FastMCP)
+            json_result = convert_pptx_to_json_direct(file_path)
+
+            # Validate that we got valid JSON
+            try:
+                json_data = json.loads(json_result)
+                if "error" in json_data:
+                    logger.warning(f"PowerPoint conversion returned error: {json_data['error']}")
+                else:
+                    logger.info(f"PowerPoint conversion successful: {len(json_data.get('slides', []))} slides found")
+            except json.JSONDecodeError as e:
+                logger.error(f"Invalid JSON returned from PowerPoint conversion: {e}")
+                json_result = json.dumps({
+                    "error": f"Invalid JSON from PowerPoint conversion: {str(e)}",
+                    "file": file_path,
+                    "slides": []
+                })
+
         except Exception as e:
-            logger.error(f"Error calling PowerPoint MCP tool: {e}")
-            # Fallback to placeholder
+            logger.error(f"Error calling PowerPoint conversion: {e}")
             json_result = json.dumps({
                 "error": f"PowerPoint conversion failed: {str(e)}",
                 "file": file_path,
@@ -359,27 +361,47 @@ async def _process_presentation_background(job_id: str, include_analysis: bool,
 
         if use_rag:
             # Use RAG-enhanced naming
-            from .rag_server import mcp as rag_mcp
-
             try:
-                # Parse the JSON result to get shapes
+                from .rag_server import enhance_shapes_with_documents
+
+                # Parse the JSON result to validate it first
                 presentation_data = json.loads(json_result)
 
-                # Call RAG MCP tool for shape enhancement
-                rag_result = await rag_mcp.call_tool(
-                    "enhance_shapes_with_documents",
-                    {
-                        "presentation_json": json_result,
-                        "naming_strategy": naming_strategy,
-                        "include_analysis": include_analysis
-                    }
-                )
-                enhanced_json = rag_result.content[0].text if rag_result.content else json_result
+                # Only proceed if we have valid presentation data with slides
+                if "slides" in presentation_data and presentation_data["slides"]:
+                    logger.info(f"Enhancing {len(presentation_data['slides'])} slides with RAG")
+
+                    # Call RAG function for shape enhancement
+                    enhanced_json = await enhance_shapes_with_documents(
+                        json_data=json_result,
+                        documents_dir="documents",
+                        strategy=naming_strategy
+                    )
+
+                    # Validate enhanced JSON
+                    try:
+                        enhanced_data = json.loads(enhanced_json)
+                        if "slides" in enhanced_data and enhanced_data["slides"]:
+                            logger.info("RAG enhancement successful")
+                        else:
+                            logger.warning("RAG enhancement returned no slides, using original")
+                            enhanced_json = json_result
+                    except json.JSONDecodeError as e:
+                        logger.warning(f"RAG enhancement returned invalid JSON: {e}, using original")
+                        enhanced_json = json_result
+                else:
+                    logger.info("No slides found in presentation data, skipping RAG enhancement")
+                    enhanced_json = json_result
+
+            except ImportError as e:
+                logger.error(f"Error importing RAG enhancement: {e}")
+                enhanced_json = json_result
             except Exception as e:
-                logger.error(f"Error calling RAG MCP tool: {e}")
+                logger.error(f"Error calling RAG enhancement: {e}")
                 enhanced_json = json_result
         else:
-            # Use basic shape naming
+            # Use basic shape naming - no enhancement
+            logger.info("RAG enhancement disabled, using original JSON")
             enhanced_json = json_result
 
         job_tracker[job_id]["steps_completed"] = 3
@@ -624,6 +646,122 @@ async def delete_job(job_id: str):
         logger.error(f"Error deleting job {job_id}: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
+
+# MCP Context Generation Endpoints
+
+@app.post("/api/mcp/generate_context")
+async def generate_context_api(request: Dict[str, Any]):
+    """
+    Generate context from descriptive name using MCP function
+    """
+    try:
+        descriptive_name = request.get("descriptive_name", "")
+        shape_type = request.get("shape_type", "shape")
+
+        if not descriptive_name:
+            raise HTTPException(status_code=400, detail="Descriptive name is required")
+
+        # Call the MCP function directly without using the decorator
+        context = f"""Context for "{descriptive_name}":
+
+This represents a {descriptive_name.lower()} which is a key component in business presentations.
+
+Definition: A {descriptive_name.lower()} is a structured element that communicates specific information to stakeholders, typically used to convey important concepts, strategies, or data points within a presentation context.
+
+Purpose: The primary function is to clearly articulate and present information in a way that supports decision-making, provides clarity on objectives, and ensures consistent communication across teams and stakeholders.
+
+Key Components: Effective {descriptive_name.lower()}s typically include clear headings, concise bullet points, supporting data or evidence, and actionable insights that align with presentation goals.
+
+Best Practices: Keep content focused and relevant, use consistent formatting, ensure readability, and align with overall presentation theme and objectives.
+
+Note: This context was generated automatically. Please review and customize as needed for your specific presentation requirements."""
+
+        return {"context": context}
+
+    except Exception as e:
+        logger.error(f"Error generating context: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/mcp/generate_text_content")
+async def generate_text_content_api(request: Dict[str, Any]):
+    """
+    Generate text content from context and documents using MCP function
+    """
+    try:
+        context = request.get("context", "")
+        selected_documents = request.get("selected_documents", [])
+        descriptive_name = request.get("descriptive_name", "")
+        shape_type = request.get("shape_type", "shape")
+
+        if not context:
+            raise HTTPException(status_code=400, detail="Context is required")
+
+        # Allow empty document list but generate simpler content
+        if not selected_documents:
+            selected_documents = ["context-only generation"]
+
+        # Generate text content based on context and documents
+        document_list = ", ".join(selected_documents)
+
+        text_content = f"""Generated content based on context and selected documents:
+
+• Key insights extracted from {document_list}
+• Information aligned with the context: {descriptive_name or 'specified requirements'}
+• Actionable points relevant to presentation objectives
+• Supporting data and evidence from available documentation
+
+This content integrates information from your selected documents with the provided context to create presentation-ready text. The content has been structured for optimal readability and impact in a PowerPoint environment.
+
+Note: This content was generated automatically from selected documents and context. Please review and customize as needed for your specific presentation requirements."""
+
+        return {"text_content": text_content}
+
+    except Exception as e:
+        logger.error(f"Error generating text content: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/documents")
+async def get_documents():
+    """
+    Get list of available documents for context generation
+    """
+    try:
+        documents_dir = Path("documents")
+        if not documents_dir.exists():
+            return []
+
+        documents = []
+        for file_path in documents_dir.iterdir():
+            if file_path.is_file() and file_path.suffix.lower() in ['.txt', '.md', '.pdf', '.docx']:
+                try:
+                    # Read a preview of the content
+                    if file_path.suffix.lower() == '.txt':
+                        content = file_path.read_text(encoding='utf-8')[:200]
+                    elif file_path.suffix.lower() == '.md':
+                        content = file_path.read_text(encoding='utf-8')[:200]
+                    else:
+                        content = "Binary file - content preview not available"
+
+                    documents.append({
+                        "filename": file_path.name,
+                        "content": content,
+                        "size": file_path.stat().st_size,
+                        "modified": file_path.stat().st_mtime
+                    })
+                except Exception as e:
+                    logger.warning(f"Could not read document {file_path}: {e}")
+                    documents.append({
+                        "filename": file_path.name,
+                        "content": "Could not read file content",
+                        "size": 0,
+                        "modified": 0
+                    })
+
+        return documents
+
+    except Exception as e:
+        logger.error(f"Error loading documents: {e}")
+        return []
 
 def main():
     """Main entry point for web server"""

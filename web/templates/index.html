@@ -12,7 +12,7 @@
     <div id="app">
         <!-- Navigation -->
         <nav class="navbar navbar-dark bg-primary">
-            <div class="container">
+            <div class="container-fluid">
                 <span class="navbar-brand">
                     <i class="fas fa-file-powerpoint me-2"></i>
                     MCP PowerPoint Tools
@@ -29,7 +29,7 @@
             </div>
         </nav>
 
-        <div class="container mt-4">
+        <div class="container-fluid mt-4">
             <!-- Alert Messages -->
             <div v-if="alertMessage" :class="`alert alert-${alertType} alert-dismissible fade show`" role="alert">
                 {{ alertMessage }}
@@ -379,7 +379,7 @@
                 </div>
 
                 <!-- Shape Editor Tab -->
-                <div class="tab-pane fade" id="editor" role="tabpanel">
+                <div class="tab-pane fade shape-editor-section" id="editor" role="tabpanel">
                     <div class="card">
                         <div class="card-header">
                             <h5 class="mb-0">
@@ -387,9 +387,11 @@
                                 Shape Editor
                             </h5>
                         </div>
-                        <div class="card-body">
-                            <!-- Job Selection -->
-                            <div class="mb-4">
+                        <div class="card-body p-0">
+                            <div class="container-fluid">
+                                <div class="p-3">
+                                    <!-- Job Selection -->
+                                    <div class="mb-4">
                                 <label for="jobSelect" class="form-label">Select Completed Job:</label>
                                 <select class="form-select" id="jobSelect" v-model="selectedJobForEditor"
                                         @change="loadPresentationForEditing">
@@ -400,51 +402,151 @@
                                 </select>
                             </div>
 
-                            <!-- Presentation Editor -->
-                            <div v-if="editingPresentation" class="presentation-editor">
+                            <!-- Document Selection for Context -->
+                            <div class="mb-4" v-if="presentationLoadingStatus === 'loaded' && slideCount > 0">
+                                <label class="form-label">
+                                    <i class="fas fa-book me-2"></i>
+                                    Select Documents for Context Generation:
+                                </label>
+                                <div class="border rounded p-3 bg-light">
+                                    <div v-if="availableDocuments && availableDocuments.length > 0" class="row">
+                                        <div v-for="doc in availableDocuments" :key="doc.filename" class="col-md-6 mb-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                       :id="'doc_' + doc.filename"
+                                                       :value="doc.filename"
+                                                       v-model="selectedDocuments">
+                                                <label class="form-check-label" :for="'doc_' + doc.filename">
+                                                    <i class="fas fa-file-text me-2"></i>
+                                                    {{ doc.filename }}
+                                                    <small class="text-muted d-block">{{ doc.content_preview }}</small>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div v-else class="text-muted text-center py-2">
+                                        <i class="fas fa-info-circle me-2"></i>
+                                        No documents available. Upload documents in the Document Context tab to enable context generation.
+                                    </div>
+                                    <div v-if="selectedDocuments.length > 0" class="mt-2 p-2 bg-success bg-opacity-10 border border-success rounded">
+                                        <small class="text-success fw-bold">
+                                            <i class="fas fa-check-circle me-1"></i>
+                                            {{ selectedDocuments.length }} document(s) selected for enhanced content generation
+                                        </small>
+                                    </div>
+                                    <div v-else class="mt-2 p-2 bg-warning bg-opacity-10 border border-warning rounded">
+                                        <small class="text-warning fw-bold">
+                                            <i class="fas fa-exclamation-triangle me-1"></i>
+                                            No documents selected - content generation will use context only
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Debug Info (can be removed in production) -->
+                            <div class="mb-3 p-2 bg-light border rounded" style="font-size: 0.8em;">
+                                <strong>Debug State:</strong>
+                                selectedJob: {{ selectedJobForEditor || 'none' }} |
+                                loadingStatus: {{ presentationLoadingStatus }} |
+                                slideCount: {{ slideCount }} |
+                                hasEditingPresentation: {{ !!editingPresentation }}
+                                <br>
+                                <strong>Conditions:</strong>
+                                showPresentation: {{ presentationLoadingStatus === 'loaded' && slideCount > 0 }} |
+                                showLoading: {{ presentationLoadingStatus === 'loading' }} |
+                                showEmpty: {{ presentationLoadingStatus === 'empty' || (presentationLoadingStatus === 'loaded' && slideCount === 0) }} |
+                                showError: {{ presentationLoadingStatus === 'error' }}
+                            </div>
+
+                            <!-- Presentation Editor: Only show when we have valid presentation with slides -->
+                            <div v-if="presentationLoadingStatus === 'loaded' && slideCount > 0" class="presentation-editor">
+                                <div class="mb-3">
+                                    <small class="text-muted">
+                                        Presentation: {{ slideCount }} slide(s) |
+                                        Dimensions: {{ Math.round((editingPresentation.slide_width || 9144000) / 914400) }}" × {{ Math.round((editingPresentation.slide_height || 6858000) / 914400) }}"
+                                    </small>
+                                </div>
                                 <div v-for="(slide, slideIndex) in editingPresentation.slides" :key="slideIndex" class="slide-container mb-4">
                                     <div class="card">
                                         <div class="card-header">
                                             <h6 class="mb-0">
                                                 <i class="fas fa-file-powerpoint me-2"></i>
                                                 Slide {{ slide.slide_number || slideIndex + 1 }}
+                                                <small class="text-muted ms-2">({{ (slide.shapes || []).length }} shape(s))</small>
                                             </h6>
                                         </div>
                                         <div class="card-body">
-                                            <!-- Slide Canvas -->
-                                            <div class="slide-canvas position-relative"
-                                                 style="width: 800px; height: 600px; border: 2px solid #dee2e6; background: white; margin: 0 auto;">
+                                            <!-- Two-column layout for slide canvas and properties -->
+                                            <table style="width: 100%; table-layout: fixed;">
+                                                <tr>
+                                                <!-- Left column: Slide Canvas -->
+                                                    <td style="width: 70%; vertical-align: top; padding-right: 20px;">
+                                                    <!-- Slide Canvas -->
+                                                    <div class="slide-canvas position-relative"
+                                                         style="width: 100%; height: 450px; border: 2px solid #dee2e6; background: white;"
+                                                         role="img"
+                                                         :aria-label="`Slide ${slideIndex + 1} with ${(slide.shapes || []).length} shapes`">
 
-                                                <!-- Shapes on Slide -->
-                                                <div v-for="(shape, shapeIndex) in slide.shapes" :key="shapeIndex"
-                                                     :class="['shape-element', 'position-absolute', 'border', 'border-primary', selectedShape === shape ? 'selected' : '']"
-                                                     :style="getShapeStyle(shape)"
-                                                     @click="selectShape(slideIndex, shapeIndex)">
+                                                        <!-- Shapes on Slide -->
+                                                        <div v-if="slide.shapes && slide.shapes.length > 0">
+                                                            <div v-for="(shape, shapeIndex) in slide.shapes" :key="shapeIndex"
+                                                             :class="['shape-element', 'position-absolute', selectedShape === shape ? 'selected-shape' : '']"
+                                                             :style="getShapeStyle(shape)"
+                                                             @click="selectShape(slideIndex, shapeIndex)"
+                                                             @keydown.enter="selectShape(slideIndex, shapeIndex)"
+                                                             @keydown.space.prevent="selectShape(slideIndex, shapeIndex)"
+                                                             :title="`${shape.descriptive_name || shape.name || 'Shape'} (${shape.shape_type})`"
+                                                             tabindex="0"
+                                                             role="button"
+                                                             :aria-label="`Select shape: ${shape.descriptive_name || shape.name || 'Shape'}`">
 
-                                                    <!-- Shape Content Preview -->
-                                                    <div class="shape-content p-1">
-                                                        <small v-if="shape.text_frame && shape.text_frame.text"
-                                                               class="text-truncate d-block">
-                                                            {{ shape.text_frame.text.substring(0, 30) }}...
-                                                        </small>
-                                                        <small v-else class="text-muted">
-                                                            {{ shape.shape_type || 'Shape' }}
-                                                        </small>
+                                                            <!-- Shape Content Preview -->
+                                                            <div class="shape-content p-1 h-100 d-flex flex-column justify-content-center">
+                                                                <div v-if="shape.text_frame && shape.text_frame.text"
+                                                                     class="text-truncate small text-dark">
+                                                                    {{ shape.text_frame.text.substring(0, 20) }}{{ shape.text_frame.text.length > 20 ? '...' : '' }}
+                                                                </div>
+                                                                <div v-else-if="shape.shape_type === 'PICTURE'" class="text-center">
+                                                                    <i class="fas fa-image text-muted"></i>
+                                                                    <div class="small text-muted">Image</div>
+                                                                </div>
+                                                                <div v-else-if="shape.shape_type === 'TABLE'" class="text-center">
+                                                                    <i class="fas fa-table text-muted"></i>
+                                                                    <div class="small text-muted">Table</div>
+                                                                </div>
+                                                                <div v-else-if="shape.shape_type === 'AUTO_SHAPE'" class="text-center">
+                                                                    <i class="fas fa-shapes text-muted"></i>
+                                                                    <div class="small text-muted">Shape</div>
+                                                                </div>
+                                                                <div v-else class="text-center">
+                                                                    <i class="fas fa-square text-muted"></i>
+                                                                    <div class="small text-muted">{{ shape.shape_type || 'Unknown' }}</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Shape Name Overlay -->
+                                                            <div class="shape-name-overlay position-absolute"
+                                                                 style="bottom: -22px; left: 50%; transform: translateX(-50%); white-space: nowrap;">
+                                                                <small class="badge bg-secondary text-white px-2">
+                                                                    {{ shape.descriptive_name || shape.name || `Shape ${shapeIndex + 1}` }}
+                                                                </small>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- No Shapes Message -->
+                                                        <div v-else class="d-flex align-items-center justify-content-center h-100">
+                                                            <div class="text-center text-muted">
+                                                                <i class="fas fa-shapes fa-2x mb-2"></i>
+                                                                <p>No shapes found on this slide</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
-
-                                                    <!-- Shape Name Overlay -->
-                                                    <div class="shape-name-overlay position-absolute"
-                                                         style="bottom: -25px; left: 0; right: 0;">
-                                                        <small class="badge bg-secondary">
-                                                            {{ shape.descriptive_name || shape.name || `Shape ${shapeIndex + 1}` }}
-                                                        </small>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Shape Properties Panel -->
-                                            <div v-if="selectedShape" class="mt-4">
-                                                <div class="card bg-light">
+                                                    </td>
+                                                    <!-- Right column: Shape Properties Panel -->
+                                                    <td style="width: 30%; vertical-align: top;">
+                                                    <!-- Shape Properties Panel -->
+                                                    <div v-if="selectedShape">
+                                                        <div class="card bg-light">
                                                     <div class="card-header">
                                                         <h6 class="mb-0">
                                                             <i class="fas fa-cog me-2"></i>
@@ -503,9 +605,41 @@
                                                         </div>
 
                                                         <!-- Text Content -->
-                                                        <div v-if="selectedShape.text_frame && selectedShape.text_frame.text" class="mb-3">
+                                                        <div class="mb-3">
                                                             <label class="form-label">Text Content:</label>
-                                                            <textarea class="form-control" rows="3" readonly>{{ selectedShape.text_frame.text }}</textarea>
+                                                            <textarea class="form-control" rows="3"
+                                                                      v-model="selectedShape.text_frame ? selectedShape.text_frame.text : ''"
+                                                                      @input="ensureTextFrame"
+                                                                      placeholder="Enter text content for this shape..."></textarea>
+                                                        </div>
+
+                                                        <!-- Context Field -->
+                                                        <div class="mb-3">
+                                                            <label class="form-label">
+                                                                <i class="fas fa-lightbulb me-2"></i>
+                                                                Context:
+                                                            </label>
+                                                            <textarea class="form-control" rows="4"
+                                                                      v-model="selectedShape.context"
+                                                                      placeholder="Detailed description of what this shape represents..."></textarea>
+                                                            <div class="mt-2">
+                                                                <button class="btn btn-outline-primary btn-sm me-2"
+                                                                        @click="generateContextFromName()"
+                                                                        :disabled="!selectedShape.descriptive_name || isGeneratingContext">
+                                                                    <i class="fas fa-robot me-1" :class="{'fa-spin': isGeneratingContext}"></i>
+                                                                    Context from Descriptive Name
+                                                                </button>
+                                                                <button class="btn btn-outline-success btn-sm"
+                                                                        @click="generateTextFromContext()"
+                                                                        :disabled="!selectedShape.context || isGeneratingText"
+                                                                        :title="selectedDocuments.length === 0 ? 'Tip: Select documents above for better content generation' : 'Generate content from context and selected documents'">
+                                                                    <i class="fas fa-magic me-1" :class="{'fa-spin': isGeneratingText}"></i>
+                                                                    Text Content from Context
+                                                                </button>
+                                                            </div>
+                                                            <small class="text-muted d-block mt-1">
+                                                                Use "Context from Descriptive Name" to generate a detailed description, then "Text Content from Context" to create presentation content.
+                                                            </small>
                                                         </div>
 
                                                         <!-- Action Buttons -->
@@ -517,26 +651,55 @@
                                                                 <i class="fas fa-times me-2"></i>Close
                                                             </button>
                                                         </div>
+                                                        </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
+
+                                                    <!-- No Shape Selected Placeholder -->
+                                                    <div v-else class="text-center py-5 text-muted">
+                                                        <i class="fas fa-mouse-pointer fa-3x mb-3"></i>
+                                                        <h6>Select a Shape</h6>
+                                                        <p>Click on a shape in the slide canvas to view and edit its properties.</p>
+                                                    </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- No Presentation Selected -->
-                            <div v-else-if="selectedJobForEditor" class="text-center py-4">
+                            <!-- Loading State: Only show when actually loading -->
+                            <div v-else-if="presentationLoadingStatus === 'loading'" class="text-center py-4">
                                 <div class="spinner-border" role="status">
                                     <span class="visually-hidden">Loading...</span>
                                 </div>
                                 <p class="mt-2">Loading presentation data...</p>
                             </div>
 
-                            <!-- Instructions -->
+                            <!-- Empty Presentation State: Only show when status is empty or loaded with 0 slides -->
+                            <div v-else-if="presentationLoadingStatus === 'empty' || (presentationLoadingStatus === 'loaded' && slideCount === 0)" class="text-center py-4">
+                                <i class="fas fa-exclamation-triangle fa-2x mb-3 text-warning"></i>
+                                <h6>No Slides Found</h6>
+                                <p class="text-muted">This presentation appears to be empty or could not be processed correctly.</p>
+                                <small class="text-muted">Try selecting a different job or re-uploading the presentation.</small>
+                            </div>
+
+                            <!-- Error State: Only show when status is error -->
+                            <div v-else-if="presentationLoadingStatus === 'error'" class="text-center py-4">
+                                <i class="fas fa-exclamation-circle fa-2x mb-3 text-danger"></i>
+                                <h6>Loading Error</h6>
+                                <p class="text-muted">Failed to load presentation data.</p>
+                                <small class="text-muted">Check the job status or try selecting a different job.</small>
+                            </div>
+
+                            <!-- Instructions: Show when no job selected or status is idle -->
                             <div v-else class="text-muted text-center py-4">
                                 <i class="fas fa-info-circle fa-2x mb-3"></i>
                                 <p>Select a completed job above to edit shape names and view slide layouts.</p>
+                                <small>Jobs must have completed processing to be available for editing.</small>
+                            </div>
+                                </div>
                             </div>
                         </div>
                     </div>

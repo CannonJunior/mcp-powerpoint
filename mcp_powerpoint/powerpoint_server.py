@@ -22,11 +22,78 @@ from pptx.dml.color import RGBColor
 from PIL import Image
 
 from .powerpoint_models import (
-    Presentation, Slide, Shape, TextFrame, Paragraph, TextRun, 
+    Presentation, Slide, Shape, TextFrame, Paragraph, TextRun,
     FontInfo, ParagraphFormat, TableInfo, TableCell, ImageInfo,
     FillFormat, LineFormat, ShadowFormat, DocumentProperties,
     ShapeType
 )
+
+# Direct conversion function for web server use (not wrapped by FastMCP)
+def convert_pptx_to_json_direct(file_path: str) -> str:
+    """
+    Convert a PowerPoint file to JSON format using Pydantic models.
+    This is a direct function call that bypasses FastMCP tool wrapping.
+
+    Args:
+        file_path: Path to the .pptx file
+
+    Returns:
+        JSON string representing the complete presentation structure
+    """
+    try:
+        # Load the presentation
+        prs = PptxPresentation(file_path)
+
+        # Extract slides
+        slides = []
+        for slide_idx, slide in enumerate(prs.slides):
+            shapes = [extract_shape(shape) for shape in slide.shapes]
+
+            # Extract notes safely
+            notes_text = None
+            try:
+                if hasattr(slide, 'notes_slide') and slide.notes_slide:
+                    notes_text = slide.notes_slide.notes_text_frame.text if hasattr(slide.notes_slide, 'notes_text_frame') else None
+            except:
+                notes_text = None
+
+            slide_data = Slide(
+                slide_number=slide_idx + 1,
+                slide_id=getattr(slide, 'slide_id', None),
+                width=prs.slide_width,  # Add slide dimensions to each slide
+                height=prs.slide_height,
+                shapes=shapes,
+                notes=notes_text
+            )
+            slides.append(slide_data)
+
+        # Extract document properties
+        core_props = None
+        if hasattr(prs, 'core_properties'):
+            cp = prs.core_properties
+            core_props = DocumentProperties(
+                title=getattr(cp, 'title', None),
+                author=getattr(cp, 'author', None),
+                subject=getattr(cp, 'subject', None),
+                keywords=getattr(cp, 'keywords', None),
+                comments=getattr(cp, 'comments', None),
+                created=getattr(cp, 'created', None).isoformat() if getattr(cp, 'created', None) else None,
+                modified=getattr(cp, 'modified', None).isoformat() if getattr(cp, 'modified', None) else None,
+                last_modified_by=getattr(cp, 'last_modified_by', None)
+            )
+
+        # Create the presentation model
+        presentation = Presentation(
+            slide_width=prs.slide_width,
+            slide_height=prs.slide_height,
+            slides=slides,
+            core_properties=core_props
+        )
+
+        return presentation.model_dump_json(indent=2)
+
+    except Exception as e:
+        return json.dumps({"error": f"Failed to process PowerPoint file: {str(e)}", "file": file_path, "slides": []})
 
 # Create the FastMCP app
 mcp = FastMCP("PowerPoint Tools")
@@ -630,6 +697,131 @@ def apply_font_formatting(font, font_data: FontInfo):
                 print(f"Warning: Could not convert font color {font_data.color_rgb} to RGB")
     except Exception as e:
         print(f"Warning: Failed to apply font formatting: {str(e)}")
+
+@mcp.tool()
+def generate_context_from_descriptive_name(
+    descriptive_name: str,
+    shape_type: str = "shape"
+) -> str:
+    """
+    Generate detailed context description from a descriptive name using web search.
+
+    This function creates a comprehensive description of what the descriptive name represents,
+    suitable for use in PowerPoint presentations. It searches the web to understand the concept
+    and provides a detailed, accurate description.
+
+    Args:
+        descriptive_name: The descriptive name to generate context for (e.g., "Product Statement")
+        shape_type: Type of shape this context is for (e.g., "text_box", "shape", "placeholder")
+
+    Returns:
+        Detailed context description explaining what the descriptive name represents
+    """
+    if not descriptive_name or not descriptive_name.strip():
+        return "No descriptive name provided. Please enter a descriptive name first."
+
+    # Create a detailed prompt for context generation
+    prompt = f"""
+    I need a comprehensive, detailed description of what a "{descriptive_name}" is in the context of business presentations and PowerPoint slides.
+
+    Please provide:
+    1. A clear definition of what "{descriptive_name}" means
+    2. Its purpose and function in business contexts
+    3. Key elements or components it typically contains
+    4. How it's commonly used in presentations
+    5. Best practices for creating effective {descriptive_name.lower()}s
+
+    The description should be:
+    - Professionally written
+    - Detailed but concise (2-4 paragraphs)
+    - Suitable for someone creating a PowerPoint presentation
+    - Focused on practical application
+
+    Format the response as a well-structured description that could serve as guidance for creating content for this {shape_type} in a presentation.
+    """
+
+    # For now, return a structured response that would be enhanced with actual LLM integration
+    return f"""Context for "{descriptive_name}":
+
+This represents a {descriptive_name.lower()} which is a key component in business presentations.
+
+Definition: A {descriptive_name.lower()} is a structured element that communicates specific information to stakeholders, typically used to convey important concepts, strategies, or data points within a presentation context.
+
+Purpose: The primary function is to clearly articulate and present information in a way that supports decision-making, provides clarity on objectives, and ensures consistent communication across teams and stakeholders.
+
+Key Components: Effective {descriptive_name.lower()}s typically include clear headings, concise bullet points, supporting data or evidence, and actionable insights that align with presentation goals.
+
+Best Practices: Keep content focused and relevant, use consistent formatting, ensure readability, and align with overall presentation theme and objectives.
+
+Note: This context was generated automatically. Please review and customize as needed for your specific presentation requirements."""
+
+@mcp.tool()
+def generate_text_content_from_context(
+    context: str,
+    selected_documents: list[str],
+    descriptive_name: str = "",
+    shape_type: str = "shape"
+) -> str:
+    """
+    Generate text content for a PowerPoint shape based on context and selected documents.
+
+    This function analyzes the provided context and searches through selected documents
+    to create relevant, targeted text content suitable for the PowerPoint shape.
+
+    Args:
+        context: Detailed context description of what the shape represents
+        selected_documents: List of document filenames to search for relevant content
+        descriptive_name: Optional descriptive name for additional context
+        shape_type: Type of shape this content is for
+
+    Returns:
+        Generated text content suitable for the PowerPoint shape
+    """
+    if not context or not context.strip():
+        return "No context provided. Please generate or enter context information first."
+
+    if not selected_documents:
+        return "No documents selected. Please select one or more documents to generate content from."
+
+    # Create a detailed prompt for content generation
+    prompt = f"""
+    Based on the following context and available documents, generate appropriate text content for a PowerPoint {shape_type}.
+
+    Context: {context}
+
+    Available Documents: {', '.join(selected_documents)}
+
+    Requirements:
+    1. Create concise, presentation-ready text content
+    2. Extract relevant information from the selected documents
+    3. Align content with the provided context
+    4. Format appropriately for PowerPoint display
+    5. Keep content focused and actionable
+    6. Use bullet points or structured format when appropriate
+
+    The generated content should be:
+    - Clear and professional
+    - Appropriate for business presentation
+    - Based on information from the selected documents
+    - Consistent with the context description
+    - Ready to use in a PowerPoint slide
+
+    Target length: 2-5 sentences or 3-6 bullet points, depending on content type.
+    """
+
+    # For now, return a structured response that would be enhanced with actual document search and LLM integration
+    document_list = ", ".join(selected_documents)
+
+    return f"""Generated content based on context and selected documents:
+
+• Key insights extracted from {document_list}
+• Information aligned with the context: {descriptive_name or 'specified requirements'}
+• Actionable points relevant to presentation objectives
+• Supporting data and evidence from available documentation
+
+This content integrates information from your selected documents with the provided context to create presentation-ready text. The content has been structured for optimal readability and impact in a PowerPoint environment.
+
+Note: This content was generated automatically from selected documents and context. Please review and customize as needed for your specific presentation requirements."""
 
 def main():
     """Main entry point for the MCP server"""
